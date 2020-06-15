@@ -1,16 +1,43 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: Who am I?
+subtitle: 소개글입니다.
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+## Intro
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+- 제 이름은 김태완입니다.
 
-What else do you need?
+- Flutter, Golang, Node.js, Python을 주로 사용하는 개발자입니다.
 
-### my history
+- 누구도 인정할만한 CTO가 되는 것이 목표입니다.
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+## Tech Stack
+
+#### - App development
+
+Native Android, Flutter(크로스 플랫폼) => 출시앱 2개 보유(본인계정앱)
+
+#### - Web-frontend
+
+Html, CSS, Javascript, Flutter => 개인 웹사이트 1개 보유(서버연동)
+
+#### - Backend
+
+Node.js(Javascript, "Typescript"), Golang => API서버, 웹서버 개발
+
+#### - Database
+
+Mysql, NoSQL(MongoDB, Redis, Firestore)
+
+#### - Data-analysis(Big-data)
+
+R언어(빅데이터 복수전공 학사) => 데이터 전처리, 클러스터링 가능 + 회귀분석 계산
+
+#### - Machine-Learning
+
+Python(빅데이터 복수전공 학사) => 사이킷런 기반 퍼센트론, 결정트리, 클러스터링, 앙상블, 글자 인식 + 회귀분석
+
+#### - Infrastructure
+
+Google cloud platform, Firebase(대부분 사용가능), Amazon Web Service(EC2, Fargate, Elastic Beanstalk, Lambda, Elastic Cache..), Microsoft Azure(App service), Heroku(개인 테스트용 웹 서버), 카페24(Mysql 디비 서버 호스팅)
