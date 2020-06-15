@@ -25,6 +25,7 @@ y = serviced time
 beta0과 beta1을 R을 통해 찾아서 회귀식을 만들어주는 문제
 
 beta0 = -0.5802
+
 beta1 = 15.0352
 
 => 답 : E{Y} = -0.5802 + 15.0352 \* X
@@ -40,8 +41,6 @@ beta1 = 15.0352
  </center>
 
 => 답 : The regression line seems to fit the data well in visual.
-
-</br>
 
 ## Q2.
 
@@ -65,7 +64,8 @@ beta1 = 15.0352
 
 X와 Y사이에 일차적인 관계가 있는지 파악하기 위해 t검정을 하는 문제. 조건은 알파값이 0.1. 결국 p값을 구하면 된다.
 
-[Decision rule]
+Decision rule
 
 - H0 : beta1 = 0 (no linear association between X and Y)
+  -> beta1이 0이면 X가 없어지기 때문에 관계가 사라짐.
 - Ha : beta1 != 0 (have linear association between X and Y)
