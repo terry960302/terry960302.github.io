@@ -7,8 +7,6 @@ cover-img: /assets/img/regression_img.jpg
 tags: [regression-analysis, regression]
 ---
 
-# 1차 과제 분석
-
 ## Q1.
 
 x = number of copiers
@@ -24,9 +22,9 @@ y = serviced time
 
 beta0과 beta1을 R을 통해 찾아서 회귀식을 만들어주는 문제
 
-beta0 = -0.5802
+b0 = -0.5802
 
-beta1 = 15.0352
+b1 = 15.0352
 
 => 답 : E{Y} = -0.5802 + 15.0352 \* X
 
@@ -50,11 +48,11 @@ beta1 = 15.0352
 
 신뢰구간 90퍼센트를 사용해서 프린터 개수(X값)가 1씩 증가할 때마다 서비스 시간(Y값)의 변화를 추정하라는 문제. 결국 X의 계수인 beta1을 추정하면 됨.(이 값에 따라 변화정도가 달라지기 때문)
 
-- beta1 = 15.0352
+- b1 = 15.0352
 - t검정을 하면 t(1-(1-0.9 / 2), 45 - 2)의 값이 t_value는 1.6811이 나옴.
-- s{b1} = 0.4831
+- s{b1} (표준오차) = 0.4831
 
--> 신뢰구간 : (beta1 - (t*value * s{b1}), beta1 + (t*value * s{b1}))
+-> 신뢰구간 : (b1 - (t_value \* s{b1}), b1 + (t_value \* s{b1}))
 
 답 : (14.2231, 15.8474)
 
@@ -69,3 +67,74 @@ Decision rule
 - H0 : beta1 = 0 (no linear association between X and Y)
   -> beta1이 0이면 X가 없어지기 때문에 관계가 사라짐.
 - Ha : beta1 != 0 (have linear association between X and Y)
+
+alpha (유의수준) = 0.1
+b1 = 15.0352
+s{b1} = 0.4831  
+t_value (검정값) = t(1 - (1 - 0.9 / 2), 45 - 3) = 1.6811
+t-statistic (통계량 / t\*)= b1 - 0 / s{b1} = 31.122
+
+t-statistic not include in -1.6811 <= t\* <= 1.6811
+reject H0, conclude Ha.
+
+답 : have linear association between X and Y, P-value = 2.2\*10^-16
+
+#### (c) Are your results in parts (a) and (b) consistent? Explain.
+
+[해설]
+
+(a)번은 베타1의 신뢰구간이고 (b)번에서는 베타1이 0이 아님을 보여준다. 그렇다면 신뢰구간에서 0이 포함되는지를 판단해야한다.
+
+답 : consistent
+
+#### (d) The manufacturer has suggested that the mean required time should not increase by more than 14 minutes for each additional copier that is serviced on a service call. Conduct a test to decide whether this standard is being satisfied by Tri-City. Control the risk of a Type I error at 0.05. State the alternatives, decision rule, and conclusion. What is P-value of the test.
+
+[해설]
+서비스 시간(Y값)이 14분을 넘기면 안된다고 하는데, 이에 대해서 테스트를 해서....
+
+- H0 : beta1 <= 14
+- Ha : beta1 > 14
+
+alpha = 0.05
+b1 = 15.0352
+s{b1} = 0.4831
+t-value = (1 - (1 - 0.9 / 2), 45 -2) = 1.6811
+t-statistic(t\*) = b1 - 14 / s{b1} = 2.1429
+
+t\* not include in t-value range => conclude Ha => beta1 > 14
+
+답 : beta >14, p_value = 0.01891
+
+## Q3
+
+#### (a) Obtain a 90 percent confidence interval for the mean service time on calls in which six copiers are serviced. Interpret your confidence interval.
+
+[해설]
+
+6개의 프린터라는 조건에서 서비스 시간(y값)에 대해 90퍼센트의 신뢰구간을 구하라는 얘기인데 그럼 X값에 6을 대입하고 신뢰구간을 구하면 된다.
+
+E{Y_6} = -0.5802 + 15.0352 \* 6 = 89.631
+t_value = (1 - (1 - 0.9 / 2), 45 - 2) = 1.6811
+
+root_MSE(잔차의 표준오차) = 8.914
+s{y_hat} (y_hat에 대한 표준오차)= 8.914 + sqrt(1 / 45 + (6 - X) / sum(X_i - X)^2) = 1.3965
+
+신뢰구간 = (E{Y} - (t_value \* s{y_hat}), E{Y} + (t_value \* s{y_hat}))
+
+답 : (74.4643, 91.9788)
+
+#### (b) Obtain a 90 percent prediction interval for the service time on the next call in which six copiers are serviced. Is your prediction interval wider than the corresponding confidence interval in part (a)? Should it be?
+
+[해설]
+
+6개의 프린트가 서비스되는 다음 전화에 서비스 시간을 신뢰구간 90퍼센트로 추정하기. 그렇게 추정한 값이 (a)번보다 넓은가? 그래야하는가?
+
+E{Y_6} = -0.5802 + 15.0352 \* 6 = 89.631
+
+#### (c) Management wishes to estimate the expected service time per copier on calls in which six copiers are serviced. Obtain an appropriate 90 percent confidence interval by covering the interval obtained in part (a). Interpret the converted confidence interval.
+
+[해설]
+
+6개의 프린트가 서비스될 때 각 프린트 서비스 시간을 추정하고 싶음. 추정은 (a)번 문제를 활용해서 90퍼센트의 신뢰구간을 구하라.
+
+E{Y_6} = -0.5802 + 15.0352 \* 6 = 89.631
