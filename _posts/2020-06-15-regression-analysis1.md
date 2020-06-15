@@ -127,14 +127,195 @@ s{y_hat} (y_hat에 대한 표준오차)= 8.914 + sqrt(1 / 45 + (6 - X) / sum(X_i
 
 [해설]
 
-6개의 프린트가 서비스되는 다음 전화에 서비스 시간을 신뢰구간 90퍼센트로 추정하기. 그렇게 추정한 값이 (a)번보다 넓은가? 그래야하는가?
+6개의 프린트가 서비스되는 다음 전화(미래의 일어날 new observation을 예측)에 서비스 시간을 신뢰구간 90퍼센트로 추정하기. 그렇게 추정한 값이 (a)번보다 넓은가? 그래야하는가?
 
 E{Y_6} = -0.5802 + 15.0352 \* 6 = 89.631
+t_value = 1.6811
+s{pred} = sqrt(MSE \* (1 + 1 / 45 + (X_h - X) / sum(X_i - mean(X)^2))) = 1.0122
+
+신뢰구간 = (E{Y_6} - (t_value \* s{pred}), E{Y_6} + (t_value \* s{pred}))
+
+답 : (74.4643, 104.7983), more wider
 
 #### (c) Management wishes to estimate the expected service time per copier on calls in which six copiers are serviced. Obtain an appropriate 90 percent confidence interval by covering the interval obtained in part (a). Interpret the converted confidence interval.
 
 [해설]
 
-6개의 프린트가 서비스될 때 각 프린트 서비스 시간을 추정하고 싶음. 추정은 (a)번 문제를 활용해서 90퍼센트의 신뢰구간을 구하라.
+6개의 프린트가 서비스될 때 각각의 프린트 서비스 시간을 추정하고 싶음. 추정은 (a)번 문제를 활용해서 90퍼센트의 신뢰구간을 구하라.
 
-E{Y_6} = -0.5802 + 15.0352 \* 6 = 89.631
+E{Y_6}\_per = (-0.5802 + 15.0352 \* 6) / 6 = 89.631 / 6 = 14.939
+t_value = 1.6811
+
+## Q4
+
+airfreight breakage data
+
+- X = transferred ampules
+- Y = number of ampules
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84688222-f1272700-af79-11ea-8f03-9b920eb81a7e.png">
+</center>
+
+#### (a) Obtain the estimated regression function. Plot the estimated regression function and the data. Does a linear regression function appear to give a good fit here.
+
+[해설]
+
+회귀식 그리고 산점도와 회귀식이 일치하는지 확인
+
+b0 (intercept)= 10.2
+b1 = 4
+
+E{Y} = 10.2 + 4 \* X
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84688521-71e62300-af7a-11ea-92d0-5bf37b2cc672.png">
+</center>
+
+답 : hard to tell the linear regression function fit the data as there are only four levels of X.
+
+#### (b) Obtain a point estimated of the expected number of broken ampules when X = 1 transfer is made.
+
+[해설]
+
+X가 1일 때 Y의 추정값을 구해라.
+
+X = 1
+E{Y} = 10.2 + 4 \* 1 = 14.2
+
+답 : 14.2
+
+#### (c) Estimate the increase in the expected number of ampules broken when there are 2 transfers as compared to 1 transfer.
+
+[해설]
+
+X가 1일 때와 비교해서 X가 2일 때 Y의 증가를 추정
+
+- X = 1
+  E{Y} = 10.2 + 4 \* 1 = 14.2
+
+- X
+  E{Y} = 10.2 + 4 \* 2 = 18.2
+
+답 : 18.2 - 14.2 = 4
+
+#### (d) Verify that your fitted regression lines goes through the point(X_bar, Y_bar)
+
+[해설]
+
+위에서 만든 회귀식에 X, Y 평균값을 넣었을 때 성립하는지 확인
+
+- X_bar = 1
+- Y_bar = 14.2
+
+  10.2 + 4 \* 1 = 14.2 => 성립함
+
+답 : regression lines goes through the point(X_bar, Y_bar)
+
+## Q5
+
+#### In Airfreight breakage Problem1.21, the least squares estimates are b0 = 10.2 and b1 = 4, and SSR(sum of squared residuals) = 17.6, Evaluate the least squares criterion Q in (1.8) for the estimates
+
+- #### (1) b0 = 9, b1 = 3;
+- #### (2) b0 = 11, b1 = 5
+
+#### Is the criterion Q larger for these estimates than for the least squres estimates?
+
+[해설]
+
+(1)번과 (2)번의 경우 잔차제곱합이 기존 잔차제곱합보다 큰지 확인
+
+(1) b0 = 9, b1 = 3, Q = 76
+(2) b0 = 11, b1 = 5, Q = 60
+
+답 : two values are larger than 17.6
+
+## Q6
+
+#### For each of the following questions, explain whether a confience interval for a mean response or as prediction interval for a new observation is appropriate.
+
+- (a) What will be the humidity level in this greenhouse tommorrow when we set the temperature level at 31C?
+- (b) How much do families whose disposable income is \$23,500 spend, on the average, for meals away from home?
+- (c) How many kilowatt-hours of celebrity will be comsumed next month by commercial and industrial users in the Twin Cities service area, given that the index if business activity for the area remains at its present level?
+
+[해설]
+
+평균반응에 대한 신뢰구간 추정 vs 새로운 관찰에 대한 예측 구간 추정
+
+- (a) : will 이므로 prediction interval
+- (b) : mean = average, confidence interval
+- (c) : will 이므로 prediction interval
+
+답 : prediction interval, confidence interval, prediction interval
+
+## Q7
+
+**Show that**
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84690981-54b35380-af7e-11ea-97fa-2e151bc6bebe.png">
+</center>
+
+#### (a)
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84690644-c4750e80-af7d-11ea-84a3-88d3dd6f79fb.png">
+</center>
+
+#### (b)
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84690749-f1292600-af7d-11ea-9fce-92c87b6eff1e.png">
+</center>
+
+#### (c)
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84690773-01410580-af7e-11ea-86eb-a3f26a20511c.png">
+</center>
+
+#### (d)
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84690814-1322a880-af7e-11ea-8575-8445e17ba202.png">
+</center>
+
+#### (e)
+
+b0 = Y_bar - b1 \* X_bar
+
+b0 + b1 \* X_bar = Y_hat
+
+답 : regression line always passes the point (X_bar, Y_bar)
+
+## Q8
+
+**Show that**
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84691081-80363e00-af7e-11ea-8c28-13bfb7ce206e.png">
+</center>
+
+#### (a)
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84691203-b673bd80-af7e-11ea-8afa-f96aaead142b.png">
+</center>
+
+#### (b)
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84691241-ca1f2400-af7e-11ea-8f62-56b0b5217137.png">
+</center>
+
+#### (c)
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84691273-d60ae600-af7e-11ea-8844-4924e3a648a0.png">
+</center>
+
+#### (d)
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84691307-e28f3e80-af7e-11ea-8f9e-6bff817fd46b.png">
+</center>
