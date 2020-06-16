@@ -9,8 +9,8 @@ tags: [regression-analysis, regression]
 
 ## Q1.
 
-x = number of copiers
-y = serviced time
+- x = number of copiers
+- y = serviced time
 
 <center>
 <img src="https://user-images.githubusercontent.com/37768791/84624318-1f761980-af1c-11ea-9cd7-b69085d582dc.png">
@@ -20,7 +20,7 @@ y = serviced time
 
 [해설]
 
-beta0과 beta1을 R을 통해 찾아서 회귀식을 만들어주는 문제
+b0과 b1을 R을 통해 찾아서 회귀식을 만들어주는 문제
 
 b0 = -0.5802
 
