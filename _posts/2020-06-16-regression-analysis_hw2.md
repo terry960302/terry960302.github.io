@@ -198,3 +198,7 @@ beta1 does not include 0 according to 99% confidence interval, so reject H0(null
 #### (c) Are the test statistic F\* and the decision rule for the general linear test numerically equivalent to those in Q2(a)?
 
 [해설]
+
+t(1 - (1 - 0.99) / 2, 45 - 2) = f(1 - 0.99, 45 - 2)이기 때문에 값이 같다고 할 수 있다.
+
+답 : Yes, those two tests are numerically equivalent.
