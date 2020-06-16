@@ -3,7 +3,7 @@ layout: post
 title: "회귀분석 알아보기 - 과제분석"
 subtitle: 2차 과제
 date: 2020-06-15 13:32:28 -0400
-cover-img: /assets/img/regression_img2.jpg
+cover-img: /assets/img/regression_img2.png
 tags: [regression-analysis, regression]
 ---
 
@@ -28,7 +28,7 @@ tags: [regression-analysis, regression]
 <img src="https://user-images.githubusercontent.com/37768791/84721888-b2ff2700-afbc-11ea-9257-e98f468993a9.png">
 </center>
 
-#### (b) Conduct a F-test to determine whether or not there is a linear association between time spent and number of copiers serviced; use alpha = 0.1. State alternatives, decision rule, and conclusion.
+#### (b) Conduct a F-test to determine whether or not there is a linear association between time spent and number of copiers serviced; use $\alpha$ = 0.1. State alternatives, decision rule, and conclusion.
 
 [해설]
 
