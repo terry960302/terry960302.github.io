@@ -97,6 +97,104 @@ X와 Y간의 직선 함수의 관계가 있는지를 가설검증(그 중 t검�
 - t_value = t(1 - (1 - 0.9) / 2, 45 - 2) = 2.695
 - t_statistic = b1 - 0 / s{b1} = 31.123
 
-<center>
-<img src="https://user-images.githubusercontent.com/37768791/84730639-b650dd80-afd1-11ea-945e-67598551c91d.png">
-</center>
+Decision rule
+
+- H0 : $\beta1$ = 0(no association)
+- Ha : $\beta1$ != 0(have association)
+
+t_statistic >= t_value, so statistic value are in reject null-hypotheses area, conclude Ha.
+
+답 : have linear association between number of copiers and total number of minutes. P_value = 2.2 \* 10^-16
+
+#### (b) Test whether or not there is a "positive" linear association between number of copiers and total number of minutes spent by a service person. Use a t-test with $\alpha$ = 0.01. State the null, alternatives, decistion rule, and conclusion. What is the P-value of the test?
+
+[해설]
+
+(a)번 문제와는 거의 비슷한데 관계가 양의 관계에 놓여있는지 검증해야함. 이때는 가설검증할 때, 기존에는 0이 "이다 / 아니다"로 뒀지만 양수, 음수를 고려해야하므로 "이상, 이하"로 놔야함.
+
+- b0 = - 0.5802
+- b1 = 15.0352
+- s{b1} = 0.4831
+- t_value = t(1 - (1 - 0.9) / 2, 45 - 2) = 2.695
+- t_statistic = b1 - 0 / s{b1} = 31.123
+
+Decision rule
+
+- H0 : $\beta1$ <= 0 (cause of b0 < 0, E{Y} become negative)
+- Ha : $\beta1$ > 0 (positive association)
+
+t_statistic >= t_value, so statistic value are in reject null-hypotheses area, conclude Ha.
+
+답 : there is positive linear association between X and Y, P_value = 2.2 \* 10^-16
+
+#### (c) Find 99% confidence interval of $\beta1$. Can we know the test result of part (a) from this confidence interval?
+
+[해설]
+
+일단 이전에는 90% 신뢰구간으로 베타1 값을 추정했는데 이번에는 99%로 추정하고, 이 추정 범위만 보고 (a)번의 가설검증 결과값을 알 수 있는가?
+
+- b1 = 15.0352
+- s{b1} = 0.4831
+- t_value = t(1 - (1- 0.99)/2, 45 - 2) = 2.6951
+- root_MSE(잔차 표준오차) = 8.914
+
+99% 신뢰구간 : b1 +- root_MSE = (13.7333, 16.3372)
+
+beta1 does not include 0 according to 99% confidence interval, so reject H0(null hypotheses) : $\beta1$ = 0, conclude Ha.
+
+답 : we know the result of test (a) according to 99% confidence interval.
+
+## Q3
+
+**Refer to Copier maintenance Problem 1.20. As in part(a) Q2, we would like to test whether or not there is a linear association between number of copiers and total number of minutes spent by a service person. Here, we use a general linear test with $\alpha$ = .01.**
+
+#### (a) State full and reduced models.
+
+[해설]
+
+그냥 베타1 = 0일 때와 아닐때의 두개의 회귀식을 만들어주면 됨.
+
+- b0 = - 0.5802
+- b1 = 15.0352
+
+답 :
+
+- full_model
+  => Y_hat = $\beta0$ + $\beta1$ \* X
+  => Y_hat = -0.5802 + 15.0352 \* X
+- reduced_model
+  => Y_hat = $\beta0$
+  => Y_hat = -0.5802
+
+#### (b) Obtain (1) SSE(F), (2) SSE(R), (3) dfF. (4) dfR, (5) test statistic F\* for the general linear test, (6) decision rule (7) p-value.
+
+[해설]
+
+- (1) SSE(F) : Full Model의 잔차제곱합
+
+  - Y_hat = -0.5802 + 15.0352 \* X
+  - redisuals = Y - Y_hat
+  - SSE(F) = sum(residuals^2) = 3416.377
+
+- (2) SSE(R) : Reduced Model의 잔차제곱합
+
+  - Y_hat = -0.5802
+  - redisuals = Y - mean(Y)
+  - SSE(F) = sum(residuals^2) = 80376.8
+
+- (3) dfF : 데이터의 개수 / 자유도, full model은 전체 개수 - 2
+  - 45 - 2 = 43
+- (4) dfR : 데이터의 개수 / 자유도, full model은 전체 개수 - 1
+  - 45 - 1 = 44
+- (5) test statistic F\* : (SSE(R) - SSE(F) / 1) / (SSE(F) / df(F))
+  - ((80376.8 - 3416.377) / 1) / (3416.377 / 43) = 968.66
+- (6) decision rule : 가설검증
+  - H0 : $\beta1$ = 0(no association)
+  - Ha : $\beta1$ != 0(have association)
+  - f-statistic >= f_value -> reject null hypotheses
+- (7) p-value : 확률 변수
+  - p_value = Pr(F> 968.66) = 0(거의 0에 수렴한다).
+
+#### (c) Are the test statistic F\* and the decision rule for the general linear test numerically equivalent to those in Q2(a)?
+
+[해설]
