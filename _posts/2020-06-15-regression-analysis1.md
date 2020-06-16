@@ -69,9 +69,13 @@ Decision rule
 - Ha : beta1 != 0 (have linear association between X and Y)
 
 alpha (유의수준) = 0.1
+
 b1 = 15.0352
-s{b1} = 0.4831  
+
+s{b1} = 0.4831
+
 t_value (검정값) = t(1 - (1 - 0.9 / 2), 45 - 3) = 1.6811
+
 t-statistic (통계량 / t\*)= b1 - 0 / s{b1} = 31.122
 
 t-statistic not include in -1.6811 <= t\* <= 1.6811
@@ -96,9 +100,13 @@ reject H0, conclude Ha.
 - Ha : beta1 > 14
 
 alpha = 0.05
+
 b1 = 15.0352
+
 s{b1} = 0.4831
+
 t-value = (1 - (1 - 0.9 / 2), 45 -2) = 1.6811
+
 t-statistic(t\*) = b1 - 14 / s{b1} = 2.1429
 
 t\* not include in t-value range => conclude Ha => beta1 > 14
@@ -114,9 +122,11 @@ t\* not include in t-value range => conclude Ha => beta1 > 14
 6개의 프린터라는 조건에서 서비스 시간(y값)에 대해 90퍼센트의 신뢰구간을 구하라는 얘기인데 그럼 X값에 6을 대입하고 신뢰구간을 구하면 된다.
 
 E{Y_6} = -0.5802 + 15.0352 \* 6 = 89.631
+
 t_value = (1 - (1 - 0.9 / 2), 45 - 2) = 1.6811
 
 root_MSE(잔차의 표준오차) = 8.914
+
 s{y_hat} (y_hat에 대한 표준오차)= 8.914 + sqrt(1 / 45 + (6 - X) / sum(X_i - X)^2) = 1.3965
 
 신뢰구간 = (E{Y} - (t_value \* s{y_hat}), E{Y} + (t_value \* s{y_hat}))
@@ -130,7 +140,9 @@ s{y_hat} (y_hat에 대한 표준오차)= 8.914 + sqrt(1 / 45 + (6 - X) / sum(X_i
 6개의 프린트가 서비스되는 다음 전화(미래의 일어날 new observation을 예측)에 서비스 시간을 신뢰구간 90퍼센트로 추정하기. 그렇게 추정한 값이 (a)번보다 넓은가? 그래야하는가?
 
 E{Y_6} = -0.5802 + 15.0352 \* 6 = 89.631
+
 t_value = 1.6811
+
 s{pred} = sqrt(MSE \* (1 + 1 / 45 + (X_h - X) / sum(X_i - mean(X)^2))) = 1.0122
 
 신뢰구간 = (E{Y_6} - (t_value \* s{pred}), E{Y_6} + (t_value \* s{pred}))
@@ -144,6 +156,7 @@ s{pred} = sqrt(MSE \* (1 + 1 / 45 + (X_h - X) / sum(X_i - mean(X)^2))) = 1.0122
 6개의 프린트가 서비스될 때 각각의 프린트 서비스 시간을 추정하고 싶음. 추정은 (a)번 문제를 활용해서 90퍼센트의 신뢰구간을 구하라.
 
 E{Y_6}\_per = (-0.5802 + 15.0352 \* 6) / 6 = 89.631 / 6 = 14.939
+
 t_value = 1.6811
 
 ## Q4
@@ -164,6 +177,7 @@ airfreight breakage data
 회귀식 그리고 산점도와 회귀식이 일치하는지 확인
 
 b0 (intercept)= 10.2
+
 b1 = 4
 
 E{Y} = 10.2 + 4 \* X
@@ -181,6 +195,7 @@ E{Y} = 10.2 + 4 \* X
 X가 1일 때 Y의 추정값을 구해라.
 
 X = 1
+
 E{Y} = 10.2 + 4 \* 1 = 14.2
 
 답 : 14.2
