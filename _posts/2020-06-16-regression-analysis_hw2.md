@@ -3,7 +3,7 @@ layout: post
 title: "회귀분석 알아보기 - 과제분석"
 subtitle: 2차 과제
 date: 2020-06-15 13:32:28 -0400
-cover-img: /assets/img/regression_img2.png
+cover-img: /assets/img/regression_img.png
 tags: [regression-analysis, regression]
 ---
 
