@@ -9,6 +9,8 @@ tags: [regression-analysis, regression]
 
 # Q3
 
+<br>
+
 ### (b)
 
 #### The cases are given in time order. Prepare a time plot for the number of copiers serviced. What does your plot show?
