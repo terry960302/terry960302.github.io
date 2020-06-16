@@ -37,5 +37,66 @@ linear association이 있는지 알기 위해서는 베타1의 값이 0인지 �
 - H0 : $\beta$1 = 0 (no association)
 - Ha : $\beta$1 != 0 (have association)
 
-n = 45
-b1 =
+위 ANOVA 테이블에 F값을 참고하면
+
+- $\alpha$ = 0.1 (유의수준)
+- F_value = f(1, 45 - 2) = 2.8260
+- F_statistic = 986.88
+- P_value (Pr(>F)) = 2.2 \* 10^-16 (F 이상일 확률)
+
+F_value < F_statistic, statistic value is more larger than F_value(placed right side of graph = reject area), and p_value also placed on right side of graph as compared to $\alpha$.
+
+so reject H0, conclude Ha.
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84722858-52251e00-afbf-11ea-8a86-9cc99807f9df.png">
+</center>
+
+답 : there is linear association between time spent and number of copiers.
+
+#### (c) By how much, relatively, is total variation in number of minutes spent on a call reduced when the number of copiers serviced is introduced into analysis? Is this a relatively small or large reduction? What is the name of this measure?
+
+[해설]
+reduced_model($\beta$1이 0인 회귀식)과 비교하는 문제인데 그렇다면 바로 anova 테이블을 돌리고 위에 (a)번에 있는 anova 테이블을 참고해서 SSR / SSTO의 값을 구하면 됨.
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84721888-b2ff2700-afbc-11ea-9257-e98f468993a9.png">
+</center>
+
+- SSR = 76960
+- SSTO = 76960(Regression, SS) + 3416(ERR, SS)
+- SSR / SSTO = R^2 = 0.9575 (0과 1사이의 값) (1에 가까우니 large reduction)
+
+답 : large reduction, coefficient of determination(R^2)
+
+#### (d) Calculate r and attach the appropriate sign.
+
+[해설]
+r 값을 구하는 문제인데 (c)번에서 푸는 방식으로 풀어서 루트만 씌워주면 됨.
+
+r = root 0.9575 = 0.9875
+
+답 : 0.9875
+
+## Q2
+
+- X = number of copiers
+- Y = serviced time
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84624318-1f761980-af1c-11ea-9cd7-b69085d582dc.png">
+</center>
+
+#### (a) Test whether or not there is a linear association between number of copiers and total number of minutes spent by a service person. Use a t-test with $\alpha$ = 0.01. State the null, alternatives, decistion rule, and conclusion. What is the P-value of the test?
+
+[해설]
+X와 Y간의 직선 함수의 관계가 있는지를 가설검증(그 중 t검정)을 통해 알아보라는 얘기
+
+- b1 = 15.0352
+- s{b1} = 0.4831
+- t_value = t(1 - (1 - 0.9) / 2, 45 - 2) = 2.695
+- t_statistic = b1 - 0 / s{b1} = 31.123
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84730639-b650dd80-afd1-11ea-945e-67598551c91d.png">
+</center>
