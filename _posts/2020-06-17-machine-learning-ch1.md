@@ -215,6 +215,15 @@ k는 결국 붉은 동그라미와 같이 특정 거리 범위 내에 있는 점
 
 ---
 
+- 스코어함수 : f(x) = beta1 \* X1 + beta2 \* X2 + beta3 \* X3  
+  Pr(Y = 1 \| X) = 1 / (1 + exp(-f(x))) = sigmoid(f(x))
+
+`[문제]`
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84874691-f3939900-b0bf-11ea-87d0-8a21fa6a4fe1.png">
+</center>
+
 ### 로지스틱 회귀(Logistic Regression) <span style="color:red">중요</span>
 
 ---
