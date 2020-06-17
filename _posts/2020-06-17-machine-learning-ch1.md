@@ -224,6 +224,13 @@ k는 결국 붉은 동그라미와 같이 특정 거리 범위 내에 있는 점
 <img src="https://user-images.githubusercontent.com/37768791/84874691-f3939900-b0bf-11ea-87d0-8a21fa6a4fe1.png">
 </center>
 
+1. f(x)는 스코어함수이기에 확률값을 나타내므로 `True`
+2. 분수를 좀 바꾸면 1 - 1 / (1 + exp(f(x)))이고 1 / 1 + (exp(-f(x)))와 동일하므로 `True`
+3. 시그모이드 함수이므로 `True`
+4. x=0일 때 y = 1일 확률과 x =1일 때 y = 0일 확률을 합하면 1인가? `False`
+5. `True`
+6. 가장 중요, .....
+
 ### 로지스틱 회귀(Logistic Regression) <span style="color:red">중요</span>
 
 ---
@@ -244,6 +251,9 @@ k는 결국 붉은 동그라미와 같이 특정 거리 범위 내에 있는 점
 
 - **오즈비**(특정 이벤트가 발생할 확률) -> P / (1-P) (P는 예측하려는 대상일 확률)
 - **로짓 함수**(오즈비에 자연로그 씌움) -> logit(P) = log(P / (1-P))
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84915275-8c91d680-b0f7-11ea-96da-c00a2f8704f6.png">
+</center>
 - **로지스틱 시그모이드 함수**(로지스틱 회귀에서의 활성화 함수)
 - 시그모이드 함수를 돌리기 때문이기도 하고 확률로 표현해야하므로 값이 0과 1사이의 값이 나옴.
 
