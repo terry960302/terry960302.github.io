@@ -5,6 +5,7 @@ subtitle: 2차 과제
 date: 2020-06-16 9:32:28 -0400
 cover-img: /assets/img/regression_img.png
 tags: [regression-analysis, regression]
+use_math: true
 ---
 
 # Q1

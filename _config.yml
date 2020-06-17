@@ -169,6 +169,9 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
 paginate: 5
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
 kramdown:
   input: GFM
