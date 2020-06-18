@@ -163,10 +163,6 @@ import numpy as np
 import math
 ```
 
-<details open>
-<summary>Python 풀이 코드</summary>
-<br>
-
 ```python
 ## 패키지 설치
 import numpy as np
@@ -412,8 +408,6 @@ else:
 이렇게 합친 학습기를 바탕으로 위에서 언급했던 우측 상단 영역의 예측을 할 수 있습니다.
 '''
 ```
-
-</details>
 
 <br>
 
