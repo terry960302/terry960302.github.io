@@ -229,9 +229,58 @@ k는 결국 붉은 동그라미와 같이 특정 거리 범위 내에 있는 점
 3. 시그모이드 함수이므로 `True`
 4. x=0일 때 y = 1일 확률과 x =1일 때 y = 0일 확률을 합하면 1인가? `False`
 5. `True`
-6. 가장 중요, .....
+6. <span style="color: red">**가장 중요**</span> 스코어함수 : Y = beta0 + X, Pr(beta0 =1) / Pr(beta0 = 0) > Pr(beta0 =1) / Pr(beta = 0)이지 않고 둘 다 같습니다. 결국 답은 `False`
 
-### 로지스틱 회귀(Logistic Regression) <span style="color:red">중요</span>
+<br>
+
+### 분류 모델 성능 평가
+
+---
+
+#### ROC 그래프
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84975040-715ab180-b15f-11ea-99e2-0f2a3fe7190a.png">
+</center>
+
+> 그래프가 왼쪽 모서리에 가까워질수록 모델의 성능이 좋습니다.
+
+#### 성능지표
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84972435-d14e5980-b159-11ea-9dfd-76403ed67674.png">
+</center>
+
+- `민감도(재현율)(Sensitivity)`
+  a / a+b : 실제 Yes인 것 중에 예측과 실제 모두 Yes인 것
+  => Pr(y_hat = 1 \| y = 1)
+- `특이도(Specificity)`
+  d / c+d : 실제 No인 것 중에 예측과 실제 모두 No인 것
+  => Pr(y_hat = 0 \| y = 0)
+- `정밀도(Precision)`
+  a / a+c : 예측이 Yes인 것 중에 실제와 예측 모두 Yes인 것
+  => Pr(y = 1 | y_hat = 1)
+
+`[문제]`
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84972828-a87a9400-b15a-11ea-80da-da718f119e44.png">
+</center>
+
+- 구하고자 하는 것 : Pr(Y = 1 \| Y_hat = 1) = a / a+c (정밀도)
+- Pr(Y = 1) = 0.001 = a + b
+- Sensitivity = 0.997 = a / a+b = Pr(Y_hat = 1 \| Y = 1)
+- Specificity = 0.985 = d / c+d = Pr(Y_hat = 0 \| Y = 0)
+
+  <나이브베이즈 적용>
+
+  Pr(Y_hat = 1 \| Y = 1) = Pr(Y = 1 \| Y_hat = 1) \* Pr(Y_hat = 1) / Pr(Y = 1)
+
+  Pr(Y = 1 \| Y_hat = 1) = 0.997 \* 0.001 / Pr(Y_hat = 1)
+
+<br>
+
+### 로지스틱 회귀(Logistic Regression) <span style="color:red">**중요**</span>
 
 ---
 
