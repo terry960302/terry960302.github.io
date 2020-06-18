@@ -12,17 +12,20 @@ use_math: true
 
 : 데이터에 있는 항목들 간에 if-then 형식의 연관성을 찾는 것입니다. 장바구니 분석이라고도 불립니다. 예시로는 "Google의 추천 검색어", "쿠팡의 상품 추천" 등등이 있습니다.
 
-- **지지도**
+- **지지도**  
+Pr(X, Y 교집합)
 <center>
 <img src="https://user-images.githubusercontent.com/37768791/84986341-61e86200-b179-11ea-8467-b39149be844e.png">
 </center>
 
-- **신뢰도**
+- **신뢰도**  
+Pr(X, Y 교집합) / Pr(X)
 <center>
 <img src="https://user-images.githubusercontent.com/37768791/84986426-82182100-b179-11ea-9237-695b8a72f1f5.png">
 </center>
 
-- **향상도**(포함률)
+- **향상도**(포함률)  
+신뢰도 / Pr(Y)
 <center>
 <img src="https://user-images.githubusercontent.com/37768791/84986504-a1af4980-b179-11ea-8be6-96ec57f775d0.png">
 </center>
@@ -30,7 +33,7 @@ use_math: true
 위 공식을 기반으로 문제를 풀어봅시다.
 <br>
 
-`[문제]`
+`[문제1]`
 
 <center>
 <img src="https://user-images.githubusercontent.com/37768791/84986746-07033a80-b17a-11ea-8f11-ec2ea35f77b6.png" >
@@ -53,6 +56,16 @@ use_math: true
 | {A, C} => B       | 100 / 2000 = **0.05**  | 400 / 2000 = **0.2**   | 100 / 400 = **0.25**  |
 
 <br>
+
+`[문제2]`
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84992214-97457d80-b182-11ea-8c67-3e7f26532c22.png">
+</center>
+
+(1) 지지도 : 1/6, 신뢰도 : 1/4  
+(2) 향상도 : 3/4
+(3) 향상도 : 9/8
 
 # 군집분석(Clustering Analysis)
 
