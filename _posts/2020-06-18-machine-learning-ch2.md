@@ -50,17 +50,23 @@ use_math: true
 <img src="https://user-images.githubusercontent.com/37768791/84977113-8554e200-b164-11ea-9572-564b88488d9d.png">
 </center>
 
-1. 카이제곱 통계량
+<br>
+
+- 카이제곱 통계량
 <center>
 <img src="https://user-images.githubusercontent.com/37768791/84977177-b0d7cc80-b164-11ea-8b75-a0dbea0a0721.png">
 </center>
 
-2. 지니지수
+<br>
+
+- 지니지수
 <center>
 <img src="https://user-images.githubusercontent.com/37768791/84977247-d82e9980-b164-11ea-80fd-b67c15487d1e.png">
 </center>
 
-3. 엔트로피 지수
+<br>
+
+- 엔트로피 지수
 <center>
 <img src="https://user-images.githubusercontent.com/37768791/84977300-f4cad180-b164-11ea-9cf4-532d4438c28f.png">
 </center>
@@ -105,12 +111,38 @@ Bagging : `B`ootstrap `Agg`reat`ing` 의 줄임말
 
 ### 부스팅 알고리즘(Boosting)
 
-=> 기저모형들을 순차적으로 만든 후, 최종적으로 합쳐서 의사결정하는 구조입니다.
+---
+
+=> 기저모형들을 순차적으로 만든 후, 최종적으로 합쳐서 의사결정하는 구조입니다.  
+=> 순차적으로 기저모형들을 만들 때 각 기저모형들은 이전 단계의 기저모형에 의존합니다.  
+=> 에러값이 있는 오분류된 개체에 대해 더 가중치를 두고 기저모형이 만들어집니다.
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84980051-ff3c9980-b16b-11ea-9ee4-02c86b2a9969.png">
+</center>
+
+> 열만 봤을 때 3가지의 이미지가 있습니다. 좌측부터 1, 2, 3이미지라고 칭하겠습니다. 1번 기저모형은 그냥 전체 훈련 데이터입니다. 예측 모형을 거치면서 오분류된 데이터를 감지합니다. 2번 이미지도 이동하면서 오분류된 데이터에 대해 가중치를 크게 부여합니다.(기호들이 커진 것을 볼 수 있을 겁니다.) 3번 이미지에서는 다시 오분류된 것을 파악해서 가중치를 재조정한 결과물입니다.
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84980092-1b403b00-b16c-11ea-995b-3c25a8748c02.png">
+</center>
+
+> 이전 이미지에서 봤듯이 그렇게 만들어진 모형들에서 오분류된 데이터의 확률을 1에서 빼준 후 모두 더해줍니다.
 
 ### AdaBoost(에이다부스트)
 
+: 훈련 오차를 효과적으로 줄일 수 있는 방법입니다.
+
 <center>
-<img src="https://user-images.githubusercontent.com/37768791/84978707-999ade00-b168-11ea-9101-65ee7abf8780.png">
+<img src="https://user-images.githubusercontent.com/37768791/84979121-a1a74d80-b169-11ea-8eb9-ef10623549bc.png">
 </center>
 
->
+> 대략적인 구조는 배깅 알고리즘과 비슷해보일 수 있지만 S1으로 표본을 추출하는 과정과 Consensus Model 부분을 주목해야합니다.
+
+- **Training Set** -> S1 : 전체 훈련 데이터를 그대로 가져옵니다.
+- **S1 -> S2** : S1에선 가중치가 모두 같습니다. 에러값(e)를 반영해서 S2로 전달합니다.
+- **S2 -> S3** : 에러값을 반영해서 가중치를 재조정해서 다시 에러를 산출해서 S3로 넘깁니다. 결국 받은 에러로 다시 가중치를 업데이트합니다.(이미지에서 보시면 S3에서 마지막 가중치(w)가 엄청 커진 것을 확인할 수 있습니다.)
+
+### 랜덤 포레스트(Radom Forest, rf)
+
+`[배경]`
