@@ -6,6 +6,7 @@ date: 2020-06-17 1:32:28 -0400
 cover-img: /assets/img/ml.jpeg
 tags: [machine learning, perceptron, adaline]
 use_math: true
+categories: ML
 ---
 
 # 퍼셉트론이란?
