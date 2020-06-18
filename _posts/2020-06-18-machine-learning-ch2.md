@@ -4,7 +4,7 @@ title: "머신러닝 개념에 발담구기"
 subtitle: 2차 정리
 date: 2020-06-18 12:32:28 -0400
 cover-img: /assets/img/ml.jpeg
-tags: [machine_learning, decision tree, ensemble]
+tags: [machine learning, decision tree, ensemble]
 use_math: true
 ---
 
