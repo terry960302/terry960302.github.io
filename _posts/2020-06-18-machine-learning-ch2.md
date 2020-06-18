@@ -143,6 +143,280 @@ Bagging : `B`ootstrap `Agg`reat`ing` 의 줄임말
 - **S1 -> S2** : S1에선 가중치가 모두 같습니다. 에러값(e)를 반영해서 S2로 전달합니다.
 - **S2 -> S3** : 에러값을 반영해서 가중치를 재조정해서 다시 에러를 산출해서 S3로 넘깁니다. 결국 받은 에러로 다시 가중치를 업데이트합니다.(이미지에서 보시면 S3에서 마지막 가중치(w)가 엄청 커진 것을 확인할 수 있습니다.)
 
+<br>
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84981264-15982480-b16f-11ea-8a41-6fd847a3b25a.png">
+</center>
+
+`[문제]`
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84981312-352f4d00-b16f-11ea-8e76-de4d4689039d.png">
+</center>
+
+<details open>
+<summary>Python 풀이 코드</summary>
+<br>
+
+```python
+## 패키지 설치
+import numpy as np
+import math
+```
+
+```python
+## 사용할 함수
+
+# 1단계 값을 예시로 함수작성
+
+y = [1, 1, 1, -1 , 1, -1, -1, 1, -1, -1] # +와 -를 구분하는 레이블
+d1 = [0.1, 0.1, 0.1, 0.1, 0.1,0.1,0.1,0.1,0.1,0.1,] # 기존 가중치
+h1 = [-1, -1, -1, -1, 1, -1,-1,  1, -1, -1] # 인디케이터 함수 돌린 값들
+
+
+# 오분류난 인덱스 함수
+
+def getMisClassified(y, h):
+    result = []
+    for i in range(0, len(y)):
+        if y[i] != h[i]:
+            result.append(i)
+        else:
+            continue
+    return result
+
+
+# 에러 함수
+
+def getErr(y, d, h):
+    result = 0
+    for i in range(0, len(y)):
+        if y[i] != h[i]:
+            result += d[i] * 1
+    return result
+
+
+# 알파값 함수
+
+def getAlpha(err):
+    return 1/2 * np.log((1- err) / err)
+
+
+# 익스포넨셜 반환값 함수
+
+def getExp(y, d, h):
+    result = []
+
+    for i in range(0, len(y)):
+        y_i = y[i]
+        h_i = h[i]
+        alpha = getAlpha(getErr(y, d, h))
+
+        value = np.exp(-alpha * y_i * h_i)
+
+        result.append(value)
+    return result
+
+
+# 가중치와 지수함수 반환값의 곱 함수
+
+def get_d_x_exp(d, exp):
+    return [i*j for i, j in zip(d, exp)]
+
+
+# z값 함수
+
+def getZ(d_x_exp):
+    return sum(d_x_exp)
+
+
+# 가중치 업데이트 함수
+
+def getUpdatedWeight(d_x_exp, z):
+    return [i / z for i in d_x_exp]
+```
+
+```python
+## 1단계 수치계산
+# 1단계
+y = [1, 1, 1, -1 , 1, -1, -1, 1, -1, -1] # +와 -를 구분하는 레이블
+d1 = [0.1, 0.1, 0.1, 0.1, 0.1,0.1,0.1,0.1,0.1,0.1]
+h1 = [-1, -1, -1, -1, 1, -1,-1,  1, -1, -1] # 인디케이터 함수 돌린 값들
+
+err1 = getErr(y, d1, h1)
+alpha1 = getAlpha(err1)
+exp1 = getExp(y, d1, h1)
+d_x_exp1 = get_d_x_exp(d1, exp1)
+z1 = getZ(d_x_exp1)
+
+print("가중치 \n=> {0}\n".format([round(i, 2) for i in d1]))
+print("오분류 인덱스 \n=> {0}\n".format(getMisClassified(y, h1)))
+print("e^-a1*yi*h1(xi) \n=> {0}\n".format([round(i, 2) for i in exp1]))
+print("d * e^-a1*yi*h1(xi) \n=> {0}\n".format([round(i, 2) for i in d_x_exp1]))
+print("err \n=> {:.2}\n".format(err1))
+print("alpha \n=> {:.2}\n".format(alpha1))
+print("z \n=> {:.2}\n".format(z1))
+
+'''
+가중치
+=> [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+
+오분류 인덱스
+=> [0, 1, 2]
+
+e^-a1*yi*h1(xi)
+=> [1.53, 1.53, 1.53, 0.65, 0.65, 0.65, 0.65, 0.65, 0.65, 0.65]
+
+d * e^-a1*yi*h1(xi)
+=> [0.15, 0.15, 0.15, 0.07, 0.07, 0.07, 0.07, 0.07, 0.07, 0.07]
+
+err
+=> 0.3
+
+alpha
+=> 0.42
+
+z
+=> 0.92
+
+'''
+```
+
+```python
+## 2단계 수치계산
+# 2단계
+d2 = getUpdatedWeight(d_x_exp1, z1)
+h2 = [1, 1, 1, -1, 1, 1, 1, 1, 1, -1] # 인디케이터 함수를 그림으로 통해 유추하여 반환한 값들
+
+err2 = getErr(y, d2, h2)
+alpha2 = getAlpha(err2)
+exp2 = getExp(y, d2, h2)
+d_x_exp2= get_d_x_exp(d2, exp2)
+z2 = getZ(d_x_exp2)
+
+print("가중치 \n=> {0}\n".format([round(i, 2) for i in d2]))
+print("오분류 인덱스 \n=> {0}\n".format(getMisClassified(y, h2)))
+print("e^-a2*yi*h2(xi) \n=> {0}\n".format([round(i, 2) for i in exp2]))
+print("d * e^-a2*yi*h2(xi) \n=> {0}\n".format([round(i, 2) for i in d_x_exp2]))
+print("err \n=> {:.2}\n".format(err2))
+print("alpha \n=> {:.2}\n".format(alpha2))
+print("z \n=> {:.2}\n".format(z2))
+
+'''
+가중치
+=> [0.17, 0.17, 0.17, 0.07, 0.07, 0.07, 0.07, 0.07, 0.07, 0.07]
+
+오분류 인덱스
+=> [5, 6, 8]
+
+e^-a2*yi*h2(xi)
+=> [0.52, 0.52, 0.52, 0.52, 0.52, 1.91, 1.91, 0.52, 1.91, 0.52]
+
+d * e^-a2*yi*h2(xi)
+=> [0.09, 0.09, 0.09, 0.04, 0.04, 0.14, 0.14, 0.04, 0.14, 0.04]
+
+err
+=> 0.21
+
+alpha
+=> 0.65
+
+z
+=> 0.82
+'''
+```
+
+```python
+## 3단계 수치계산
+
+# 3단계
+
+d3 = getUpdatedWeight(d_x_exp2, z2)
+h3 = [1, 1, 1, 1, -1, -1, -1, -1, -1, -1] # 인디케이터 함수를 그림으로 통해 유추하여 반환한 값들
+
+err3 = getErr(y, d3, h3)
+alpha3 = getAlpha(err3)
+exp3 = getExp(y, d3, h3)
+d_x_exp3= get_d_x_exp(d3, exp3)
+z3 = getZ(d_x_exp3)
+
+print("가중치 \n=> {0}\n".format([round(i, 2) for i in d3]))
+print("오분류 인덱스 \n=> {0}\n".format(getMisClassified(y, h3)))
+print("e^-a3*yi*h3(xi) \n=> {0}\n".format([round(i, 2) for i in exp3]))
+print("d * e^-a3*yi*h3(xi) \n=> {0}\n".format([round(i, 2) for i in d_x_exp3]))
+print("err \n=> {:.2}\n".format(err3))
+print("alpha \n=> {:.2}\n".format(alpha3))
+print("z \n=> {:.2}\n".format(z3))
+
+'''
+가중치
+=> [0.11, 0.11, 0.11, 0.05, 0.05, 0.17, 0.17, 0.05, 0.17, 0.05]
+
+오분류 인덱스
+=> [3, 4, 7]
+
+e^-a3*yi*h3(xi)
+=> [0.4, 0.4, 0.4, 2.52, 2.52, 0.4, 0.4, 2.52, 0.4, 0.4]
+
+d * e^-a3*yi*h3(xi)
+=> [0.04, 0.04, 0.04, 0.11, 0.11, 0.07, 0.07, 0.11, 0.07, 0.02]
+
+err
+=> 0.14
+
+alpha
+=> 0.92
+
+z
+=> 0.69
+'''
+```
+
+```python
+## 우측 상단 영역 예측
+sign = lambda x: math.copysign(1, x) # 람다 함수는 다른 언어의 map과 거의 비슷(math 모듈의 copysign 함수로 sign함수를 구현하기 위함.)
+
+# 우측 상단 영역은 1단계 범위에 안들어가서 -1, 2단계 범위에도 안들어가서 -1, 3단계 범위엔 들어가서 1입니다.
+value = (-1) * alpha1 + (-1) * alpha2 + 1 * alpha3 # 위에서 구한 알파값으로 계산을 합니다.
+result = sign(value) # sign 함수에 넣어 양수 영역인지 음수 영역인지 반환합니다.
+
+print("우측 상단 영역을 예측해봅시다.")
+
+if result >= 0:
+    print("=> 양수 영역에 해당합니다.")
+else:
+    print("=> 음수 영역에 해당합니다.")
+
+'''
+우측 상단 영역을 예측해봅시다.
+=> 음수 영역에 해당합니다.
+'''
+```
+
+```python
+## 해석
+
+'''
+에이다 부스트(adaboost)는 학습을 할 때 전체를 대상으로 훈련을 진행하고 오분류된 데이터에는 높은 가중치를, 제대로 분류된
+데이터들에 대해서는 낮은 가중치를 부여합니다. 그래서 높은 가중치에 대해서 집중적으로 학습을 하는 단계를 거칩니다.
+그리고 이렇게 단계를 거치면서 각 단계별로 서로 다른 가중치를 부여하게 되었는데, 다수결 투표 방식으로 학습기를 합칩니다.
+이렇게 합친 학습기를 바탕으로 위에서 언급했던 우측 상단 영역의 예측을 할 수 있습니다.
+'''
+```
+
+</details>
+
+<br>
+
 ### 랜덤 포레스트(Radom Forest, rf)
 
-`[배경]`
+: 트리를 구성할 때, 각 노드에서 일부의 변수들을 랜덤하게 지정합니다.(데이터에서 컬럼을 임의로 지정해서 추출합니다.)
+
+- 정확도 높음
+- 빅데이터에 적합
+- 변수의 중요도에 대한 추정치를 제공
+
+<center>
+<img src="https://user-images.githubusercontent.com/37768791/84980946-5e031280-b16e-11ea-9382-7eb21aa153f9.png">
+</center>
