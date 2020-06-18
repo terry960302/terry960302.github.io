@@ -155,6 +155,14 @@ Bagging : `B`ootstrap `Agg`reat`ing` 의 줄임말
 <img src="https://user-images.githubusercontent.com/37768791/84981312-352f4d00-b16f-11ea-8e76-de4d4689039d.png">
 </center>
 
+<br>
+
+```python
+## 패키지 설치
+import numpy as np
+import math
+```
+
 <details open>
 <summary>Python 풀이 코드</summary>
 <br>
