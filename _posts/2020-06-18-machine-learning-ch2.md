@@ -163,11 +163,7 @@ import numpy as np
 import math
 ```
 
-```python
-## 패키지 설치
-import numpy as np
-import math
-```
+<br>
 
 ```python
 ## 사용할 함수
@@ -241,6 +237,8 @@ def getUpdatedWeight(d_x_exp, z):
     return [i / z for i in d_x_exp]
 ```
 
+<br>
+
 ```python
 ## 1단계 수치계산
 # 1단계
@@ -287,6 +285,8 @@ z
 '''
 ```
 
+<br>
+
 ```python
 ## 2단계 수치계산
 # 2단계
@@ -330,6 +330,8 @@ z
 => 0.82
 '''
 ```
+
+<br>
 
 ```python
 ## 3단계 수치계산
@@ -377,6 +379,8 @@ z
 '''
 ```
 
+<br>
+
 ```python
 ## 우측 상단 영역 예측
 sign = lambda x: math.copysign(1, x) # 람다 함수는 다른 언어의 map과 거의 비슷(math 모듈의 copysign 함수로 sign함수를 구현하기 위함.)
@@ -397,6 +401,8 @@ else:
 => 음수 영역에 해당합니다.
 '''
 ```
+
+<br>
 
 ```python
 ## 해석
