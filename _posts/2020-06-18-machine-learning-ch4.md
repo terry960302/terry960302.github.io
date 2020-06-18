@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "머신러닝 개념에 발담구기"
-subtitle: 4차 정리
+title: "머신러닝 개념에 발담구기4"
+subtitle: CNN, RNN
 date: 2020-06-18 4:58:28 -0400
 cover-img: /assets/img/ml.jpeg
 tags: [machine learning, cnn, rnn]
@@ -40,7 +40,7 @@ cnn 구조
 <img src="https://user-images.githubusercontent.com/37768791/84996401-2ef99a80-b188-11ea-9040-2b91d8c3c0d2.png">
 </center>
 
-> 위의 움짤을 정지화면으로 해서 가중치를 구하는 과정을 시각화했습니다. 가중치와 곱한 값의 총 합을 Feature Map에 반영합니다.
+> 위의 움짤을 정지화면으로 해서 특징맵 산출 과정을 시각화했습니다. 기존 특징맵과 필터의 곱한 값의 총합을 Feature Map에 반영합니다.
 
 <br>
 
@@ -59,6 +59,8 @@ cnn 구조
 
 ### 패딩
 
+---
+
 : html을 좀 다뤄보셨던 분이라면 무슨 의미인지 바로 감이 오실 것입니다. 아래 그림을 봅시다.
 
 <center>
@@ -71,9 +73,19 @@ cnn 구조
 
 ### 풀링 연산(Pooling)
 
+---
+
 : 가로, 세로 방향의 공간을 줄이는 연산입니다. 유형으로는 평균 풀링과 최대 풀링이 있습니다.
 
 <center>
 <img src="https://user-images.githubusercontent.com/37768791/84998198-7d0f9d80-b18a-11ea-8bd1-e5ec7257ada9.png">
 최대 풀링(max pooling)
 </center>
+
+> 그림에서 보이는 것과 같이 기존 특징맵에서 특정 크기만큼 샘플링해서 최댓값을 결과 특징맵에 반영합니다. 평균 풀링도 평균을 구한다는 점만 다를 뿐 거의 비슷해서 생략합니다. 참고로 필터를 씌우는 과정이 아니라 기존 특징맵의 크기를 줄이는 과정입니다.
+
+<br>
+
+# 순환신경망 모형(RNN, Recurrent Neural Network)
+
+: 신경망에 `시간`이라는 개념을 도입해서 `순차적`으로 들어오는 정보를 처리하는 신경망입니다. CNN은 주로 이미지에서 사용되었지만, RNN은 주로 자연어나 음성신호, 주식 같은 곳에서 사용됩니다.

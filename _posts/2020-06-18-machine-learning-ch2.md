@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "머신러닝 개념에 발담구기"
-subtitle: 2차 정리
+title: "머신러닝 개념에 발담구기2"
+subtitle: 의사결정나무, 앙상블
 date: 2020-06-18 12:32:28 -0400
 cover-img: /assets/img/ml.jpeg
 tags: [machine learning, decision tree, ensemble]

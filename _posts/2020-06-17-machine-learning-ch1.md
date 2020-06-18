@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "머신러닝 개념에 발담구기"
-subtitle: 1차 정리
+title: "머신러닝 개념에 발담구기1"
+subtitle: 퍼셉트론, 아달린
 date: 2020-06-17 1:32:28 -0400
 cover-img: /assets/img/ml.jpeg
 tags: [machine learning, perceptron, adaline]

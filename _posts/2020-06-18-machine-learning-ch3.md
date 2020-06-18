@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "머신러닝 개념에 발담구기"
-subtitle: 3차 정리
+title: "머신러닝 개념에 발담구기3"
+subtitle: 군집분석, 연관규칙
 date: 2020-06-18 2:40:28 -0400
 cover-img: /assets/img/ml.jpeg
 tags: [machine learning, clustering, kmeans, association rule]
