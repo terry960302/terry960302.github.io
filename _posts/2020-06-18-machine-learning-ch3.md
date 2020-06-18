@@ -33,9 +33,9 @@ use_math: true
 `[문제]`
 
 <center>
-<img src="https://user-images.githubusercontent.com/37768791/84986746-07033a80-b17a-11ea-8f11-ec2ea35f77b6.png" height=170>
-<img src="https://user-images.githubusercontent.com/37768791/84989445-a296aa00-b17e-11ea-915d-37e7db8fc46a.png" height=170>
-<img src="https://user-images.githubusercontent.com/37768791/84986666-e4712180-b179-11ea-8bb4-ac2e8b0976ca.png" height= 170>
+<img src="https://user-images.githubusercontent.com/37768791/84986746-07033a80-b17a-11ea-8f11-ec2ea35f77b6.png" >
+<img src="https://user-images.githubusercontent.com/37768791/84989445-a296aa00-b17e-11ea-915d-37e7db8fc46a.png" >
+<img src="https://user-images.githubusercontent.com/37768791/84986666-e4712180-b179-11ea-8bb4-ac2e8b0976ca.png" >
 </center>
 
 > 상단 이미지는 거래 데이터입니다. 상단 우측 이미지는 상대도수입니다. 하단이미지는 연관규칙입니다. 이를 기반으로 지지도, 신뢰도, 향상도를 계산하면 됩니다.
