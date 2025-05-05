@@ -4,5 +4,87 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
+> 안녕하세요. 김태완입니다.
 {: .prompt-tip }
+
+# CONTACT
+
+- 📧  Email: [terry960302@gmail.com](mailto:terry960302@gmail.com)
+- 🌐  Github: https://github.com/terry960302
+- 📝  Blog(Old): https://blog.naver.com/ljk041180 
+- 📝  Blog(New): https://pandaterry.tistory.com/
+
+# WORK EXPERIENCE
+
+## 2023.05 - 2025.02
+
+`1년 9개월`
+
+### 대한민국 공군
+
+***소프트웨어개발병(백엔드)***
+
+> 소프트웨어 개발병으로 복무하며 20개월간 군사 도메인 웹 시스템 개발 및 유지보수를 담당했습니다.
+> 
+- **폐쇄망 환경**에서 군사 시스템을 단독으로 설계·개발 (Java, Spring Boot, OracleDB 기반)
+- 도메인별 인가 정책을 **AOP + 전략 디자인 패턴** 구조로 정리해 정책 변경에 유연하게 대응
+- **멀티스레드** 환경에서 발생하는 엔티티 상태 변화 추적을 위해 비동기 큐 기반 감사 로그 구조를 직접 구현
+- 외부 의존 없이 모든 기능을 **자체 설계**하고, 수동 배포 및 로그 기반 장애 대응까지 전담
+
+**`Java` `Spring-boot` `Oracle` `Maven` `Jboss`  `Vue.js` `Jsp` `Typescript` `Linux` `Docker`** 
+
+---
+
+## 2022.07 - 2023.04
+
+`10개월`
+
+### 아키
+
+***프리랜서 웹 개발자***
+
+> 한솔그룹의 **Anbox 웹사이트**(anbox.co.kr) 리뉴얼 프로젝트를 외주로 맡아 **개인사업자**로서 **프리랜서 팀**을 운영하며, **웹사이트 리뉴얼**과 **백오피스 개발**을 수행했습니다.
+> 
+- 한솔그룹 ANBOX 웹사이트 리뉴얼 프로젝트를 수주해 **기획, 개발, QA 대응**까지 직접 운영
+- **주문제작 영역**의 서버 재구성 및 UI/UX를 개선하고, 백오피스는 micro-frontend 방식으로 재구성
+- 일정 및 품질 신뢰를 확보해 타 외주팀 대비 높은 만족도로 **계약금 인상에 기여**
+- 프리랜서 팀 리드로서 클라이언트 **커뮤니케이션, 일정 조율, 외주 인력 운영**을 직접 수행
+
+**`Node.js` `Nest.js` `Typescript` `MsSQL` `React.js` `Aws`**
+
+---
+
+## 2020.07 - 2022.05
+
+`1년 11개월`
+
+### (주)프레젤글로벌커넥션그룹
+
+***기술책임 | 사내이사***
+
+> 2020년에 공동창업하여 10명규모로 운영했던 IT법인입니다. 법인을 운영하며 서비스 개발 및 개발팀 관리에 기여했습니다.
+> 
+- ‘글로벌 커뮤니티 → 공동구매 커머스 → 구매 추천 커뮤니티’ 순으로 3개 서비스를 **개발부터 운영까지 주도**
+- SQL 병목 구간을 ‘**EXPLAIN ANALYZE**’ 기반으로 리팩토링해 **최대 400배 개선**, 실시간 쿼리 안정성 확보
+- 재고 동시성 문제는 트랜잭션 기반 다중 검증 구조로 해결해 **정합성과 처리 성능**을 균형 있게 확보
+- **5인 개발팀을 리딩**하며 설계·개발 외에도 기술 결정, 일정·릴리즈 조율까지 총괄
+
+**`Node.js` `Nest.js` `Typescript` `MySQL` `React.js` `Flutter` `Dart` `FaunaDB` `Algolia-SDK` `Aws` `GCP` `Azure` `Graphql` `Redis` `Docker` `Firebase`**
+
+---
+
+## 2019.12 - 2020.02
+
+`3개월`
+
+### 에피라이브
+
+***모바일 개발자***
+
+> 에피라이브는 음성스트리밍 글로벌 어플리케이션을 만드는 회사로 5만명이 사용하는 서비스인 ‘에피’ 앱 개발에 참여했습니다.
+> 
+- **인터랙티브 애니메이션 컴포넌트** 제작 및 **리팩토링** (리액티브, 함수형 코드)
+- **유닛 테스트 적용** 및 **메서드 단위 리팩토링**
+- **Paypal 결제 시스템 개발** 및 **Flutter 웹사이트** 구축
+
+**`Flutter` `Dart` `Firebase` `Paypal-SDK` `Node.js`**
