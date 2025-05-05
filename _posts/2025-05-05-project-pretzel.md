@@ -39,7 +39,7 @@ tags: [flutter, typescript, node.js, mysql, firebase, azure, redis]
 
 
 ## 아키텍처 도식화
-![Architecture Diagram](/assets/img/2025-05-05_project-pretzel/architecture-diagram.png)
+![Architecture Diagram](/assets/img/2025-05-05-project-pretzel/architecture-diagram.png)
 
 ## 프로젝트 개요
 
