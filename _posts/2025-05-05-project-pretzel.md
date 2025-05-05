@@ -33,10 +33,10 @@ carousels:
 
 ## 시연 이미지
 
-  {% include carousel.html height="50" unit="%" duration="7" number="1" %}
+  {% include carousel.html height="100%" unit="%" duration="7" number="1" %}
 
-  {% include carousel.html height="50" unit="%" duration="7" number="2" %}
-  
+  {% include carousel.html height="100%" unit="%" duration="7" number="2" %}
+
 
 ## 아키텍처 도식화
 ![Architecture Diagram](/assets/img/2025-05-05-project-pretzel/architecture-diagram.png)
