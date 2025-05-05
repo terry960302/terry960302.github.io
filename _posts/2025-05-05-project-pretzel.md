@@ -25,14 +25,26 @@ categories: [포트폴리오, (주)프레젤글로벌커넥션그룹]
 ---
 
 ## 시연 이미지
-<div style="display: flex; justify-content: center; gap: 10px;">
-  <img src="/assets/img/2025-05-05-project-pretzel/pretzel_1.jpeg" width="30%" alt="pretzel1"/>  
-  <img src="/assets/img/2025-05-05-project-pretzel/pretzel_2.jpeg" width="30%" alt="pretzel2"/>
-  <img src="/assets/img/2025-05-05-project-pretzel/pretzel_3.jpeg" width="30%" alt="pretzel3"/>
-  <img src="/assets/img/2025-05-05-project-pretzel/pretzel_4.jpeg" width="30%" alt="pretzel4"/>
-  <img src="/assets/img/2025-05-05-project-pretzel/pretzel_5.jpeg" width="30%" alt="pretzel5"/>
-</div>
 
+<div class="horizontal-gallery">
+  <div class="gallery-container">
+    <div class="gallery-item">
+  <img src="/assets/img/2025-05-05-project-pretzel/pretzel_1.jpeg" width="30%" alt="pretzel1"/>  
+    </div>
+    <div class="gallery-item">
+  <img src="/assets/img/2025-05-05-project-pretzel/pretzel_2.jpeg" width="30%" alt="pretzel2"/>
+    </div>
+    <div class="gallery-item">
+  <img src="/assets/img/2025-05-05-project-pretzel/pretzel_3.jpeg" width="30%" alt="pretzel3"/>
+    </div>
+    <div class="gallery-item">
+  <img src="/assets/img/2025-05-05-project-pretzel/pretzel_4.jpeg" width="30%" alt="pretzel4"/>
+    </div>
+    <div class="gallery-item">
+  <img src="/assets/img/2025-05-05-project-pretzel/pretzel_5.jpeg" width="30%" alt="pretzel5"/>
+    </div>
+  </div>
+</div>
 
 ## 아키텍처 도식화
 ![Architecture Diagram](/assets/img/2025-05-05-project-pretzel/architecture-diagram.png)
