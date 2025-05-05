@@ -3,8 +3,7 @@ layout: post
 title: "프레젤(Pretzel) 서비스"
 description: 북미 해외 교환/유학생 커뮤니티 서비스
 date: 2025-05-05 17:01:28 -0400
-tags: [Flutter, Typescript, Node.js, MySQL, Firebase, Azure, Redis]
-categories: [(주)프레젤글로벌커넥션그룹, 2020년도]
+tags: [flutter, typescript, node.js, mysql, firebase, azure, redis]
 ---
 
 
