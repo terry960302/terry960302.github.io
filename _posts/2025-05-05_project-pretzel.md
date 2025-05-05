@@ -1,3 +1,14 @@
+---
+layout: post
+title: "프레젤(Pretzel) - 북미 해외 교환/유학생 커뮤니티 서비스"
+subtitle: (주)프레젤글로벌커넥션그룹, 2020.04-2020.11
+date: 2025-05-05 17:01:28 -0400
+cover-img: /assets/img/2025-05-05_project-pretzel/architecture-diagram.png
+tags: [Flutter, Typescript, Node.js, MySQL, Firebase, Azure, Redis]
+use_math: true
+categories: 2020
+---
+
 
 # 📘 Frezel 글로벌 커뮤니티 앱
 

@@ -1,19 +1,20 @@
 # --- Basic options --- #
 
 # Name of website
-title: "Portfolio"
+title: "Terry's Portfolio"
 
 # Short description of your site
-description: Backend Developer
+description: 안녕하세요. 소프트웨어 엔지니어 김태완입니다. 이 사이트에선 지금까지 헤온 프로젝트 소개에 대해 다루고 있습니다. 
 
 # Your name to show in the footer
-author: Taewan Kim
+author: 김태완
 
 # --- List of links in the navigation bar --- #
 
 navbar-links:
   About Me: "aboutme"
   Resources:
+    - 2020: 
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
   Author's home: "https://github.com/terry960302"
