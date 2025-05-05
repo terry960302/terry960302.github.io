@@ -1,7 +1,7 @@
 ---
 title: "프레젤(Pretzel) - 북미 해외 교환/유학생 커뮤니티 서비스"
 date: 2025-05-05 17:01:28 -0400
-thumbnail: /assets/img/2025-05-05_project-pretzel/pretzel_banner.png
+thumbnail: /assets/img/2025-05-05-project-pretzel/pretzel_banner.png
 tags: [Flutter, Typescript, Node.js, MySQL, Firebase, Azure, Redis]
 categories: ["(주)프레젤글로벌커넥션그룹", "2020"]
 ---
@@ -27,11 +27,11 @@ categories: ["(주)프레젤글로벌커넥션그룹", "2020"]
 
 ## 시연 이미지
 <p align="center">
-  <img src="/assets/img/2025-05-05_project-pretzel/pretzel_1.jpeg" width="18%" alt="pretzel1"/>  
-  <img src="/assets/img/2025-05-05_project-pretzel/pretzel_2.jpeg" width="18%" alt="pretzel2"/>
-  <img src="/assets/img/2025-05-05_project-pretzel/pretzel_3.jpeg" width="18%" alt="pretzel3"/>
-  <img src="/assets/img/2025-05-05_project-pretzel/pretzel_4.jpeg" width="18%" alt="pretzel4"/>
-  <img src="/assets/img/2025-05-05_project-pretzel/pretzel_5.jpeg" width="18%" alt="pretzel5"/>
+  <img src="/assets/img/2025-05-05-project-pretzel/pretzel_1.jpeg" width="30%" alt="pretzel1"/>  
+  <img src="/assets/img/2025-05-05-project-pretzel/pretzel_2.jpeg" width="30%" alt="pretzel2"/>
+  <img src="/assets/img/2025-05-05-project-pretzel/pretzel_3.jpeg" width="30%" alt="pretzel3"/>
+  <img src="/assets/img/2025-05-05-project-pretzel/pretzel_4.jpeg" width="30%" alt="pretzel4"/>
+  <img src="/assets/img/2025-05-05-project-pretzel/pretzel_5.jpeg" width="30%" alt="pretzel5"/>
 </p>
 
 
