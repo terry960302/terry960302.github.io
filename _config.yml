@@ -1,10 +1,10 @@
 # --- Basic options --- #
 
 # Name of website
-title: "Be Allrounder Developer"
+title: "Portfolio"
 
 # Short description of your site
-description: Flutter / Golang / Node.js / Python Developer
+description: Backend Developer
 
 # Your name to show in the footer
 author: Taewan Kim
@@ -22,7 +22,7 @@ navbar-links:
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/profile.png"
+avatar: "/assets/img/profile.jpg"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
@@ -40,7 +40,6 @@ social-network-links:
   email: "terry960302@gmail.com"
   facebook: ljk041180
   github: terry960302
-  twitter: daattali
   rss: true
 #  reddit: yourname
 #  linkedin: daattali
