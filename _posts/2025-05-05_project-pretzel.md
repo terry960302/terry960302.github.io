@@ -3,14 +3,14 @@ layout: post
 title: "프레젤(Pretzel) - 북미 해외 교환/유학생 커뮤니티 서비스"
 subtitle: (주)프레젤글로벌커넥션그룹, 2020.04-2020.11
 date: 2025-05-05 17:01:28 -0400
-cover-img: /assets/img/2025-05-05_project-pretzel/architecture-diagram.png
+cover-img: /assets/img/pretzel_banner.png
 tags: [Flutter, Typescript, Node.js, MySQL, Firebase, Azure, Redis]
 use_math: true
 categories: 2020
 ---
 
 
-# 📘 Frezel 글로벌 커뮤니티 앱
+# 프레젤(Pretzel) - 북미 해외 교환/유학생 커뮤니티 서비스
 
 > **시간표 기반 실시간 채팅**을 중심으로 한, 해외 유학생과 교환학생을 위한 커뮤니티 앱
 
@@ -25,22 +25,37 @@ categories: 2020
 
 ---
 
+## 시연 이미지
+<p align="center">
+
+  <img src="../assets/img/2025-05-05_project-pretzel/pretzel_1.jpeg" width="18%"/>  
+  <img src="../assets/img/2025-05-05_project-pretzel/pretzel_2.jpeg" width="18%"/>
+  <img src="../assets/img/2025-05-05_project-pretzel/pretzel_3.jpeg" width="18%"/>
+  <img src="../assets/img/2025-05-05_project-pretzel/pretzel_4.jpeg" width="18%"/>
+  <img src="../assets/img/2025-05-05_project-pretzel/pretzel_5.jpeg" width="18%"/>
+  
+  
+  
+  
+</p>
+
+
 ## 아키텍처 도식화
 ![Architecture Diagram](../assets/img/2025-05-05_project-pretzel/architecture-diagram.png)
 
-## 🧭 프로젝트 개요
+## 프로젝트 개요
 
 Frezel 커뮤니티 앱은 **해외 유학생과 교환학생들이 시간표를 기반으로 자연스럽게 커뮤니티를 형성하고 소통할 수 있도록 설계된 모바일 전용 플랫폼**입니다.  
 기본적으로 Firebase 기반의 **서버리스 인프라** 위에서 설계되었으며, 실시간 채팅, 사용자 반응형 알림, 자동화된 수업정보 수집 기능 등을 포함해 **1000명 이상의 사용자**가 실제로 사용한 검증된 MVP입니다.
 
-- ✅ **국내 10개 대학교에서 테스트베드 운영**
-- ✅ **약 1,000명의 실제 사용자 확보**
-- ✅ **핵심 기능: 시간표 기반 수업별 채팅**
-- ✅ **영문 수업 정보 기반 자동 수집 및 활용**
+-  **국내 10개 대학교에서 테스트베드 운영**
+-  **약 1,000명의 실제 사용자 확보**
+-  **핵심 기능: 시간표 기반 수업별 채팅**
+-  **영문 수업 정보 기반 자동 수집 및 활용**
 
 ---
 
-## 🔧 주요 기능
+## 주요 기능
 
 | 기능 | 설명 |
 |------|------|
@@ -55,7 +70,7 @@ Frezel 커뮤니티 앱은 **해외 유학생과 교환학생들이 시간표를
 
 ---
 
-## 🏗️ 아키텍처 구성
+## 아키텍처 구성
 
 ```
 Flutter 앱
@@ -80,7 +95,7 @@ Flutter 앱
 
 ---
 
-## 📦 기술 스택
+## 기술 스택
 
 - **Frontend**: Flutter
 - **Backend**: Firebase Functions (Serverless)
@@ -101,7 +116,7 @@ Flutter 앱
 
 ---
 
-## 🧩 설계 철학
+## 설계 철학
 
 - **핵심 기능에 집중**: 시간표 → 수업 → 채팅방이라는 직관적인 UX 흐름
 - **서버리스 우선**: Firebase 기반 MVP를 빠르게 구축
@@ -111,11 +126,11 @@ Flutter 앱
 
 ---
 
-## 🧪 운영 이력
+## 운영 이력
 
-- ✅ 국내 10개 대학교에서 테스트베드 운영
-- ✅ 1,000명 이상의 사용자로부터 피드백 수집
-- ✅ 안정적인 WebSocket 기반 실시간 채팅 운영 경험 확보
+-  국내 10개 대학교에서 테스트베드 운영
+-  1,000명 이상의 사용자로부터 피드백 수집
+-  안정적인 WebSocket 기반 실시간 채팅 운영 경험 확보
 
 ---
 

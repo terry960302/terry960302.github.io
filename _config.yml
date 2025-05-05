@@ -14,9 +14,11 @@ author: 김태완
 navbar-links:
   About Me: "aboutme"
   Resources:
+    - 2024:
+    - 2023:
+    - 2022:
+    - 2021:
     - 2020: 
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
   Author's home: "https://github.com/terry960302"
 
 # --- Logo --- #
@@ -69,7 +71,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "MyWebsite.com"
+# url-pretty: ""
 
 # Create a "tags" index page and make tags on each post clickable
 link-tags: true
