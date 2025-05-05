@@ -5,6 +5,13 @@ description: 북미 해외 교환/유학생 커뮤니티 서비스
 date: 2020-04-03 17:01:28 -0400
 tags: [flutter, typescript, node.js, mysql, firebase, azure, redis]
 categories: [포트폴리오, (주)프레젤글로벌커넥션그룹]
+carousels:
+  - images: 
+    - image: /assets/img/2025-05-05-project-pretzel/pretzel_1.jpeg
+    - image: /assets/img/2025-05-05-project-pretzel/pretzel_2.jpeg
+    - image: /assets/img/2025-05-05-project-pretzel/pretzel_3.jpeg
+    - image: /assets/img/2025-05-05-project-pretzel/pretzel_4.jpeg
+    - image: /assets/img/2025-05-05-project-pretzel/pretzel_5.jpeg
 ---
 
 
@@ -26,25 +33,10 @@ categories: [포트폴리오, (주)프레젤글로벌커넥션그룹]
 
 ## 시연 이미지
 
-<div class="horizontal-gallery">
-  <div class="gallery-container">
-    <div class="gallery-item">
-  <img src="/assets/img/2025-05-05-project-pretzel/pretzel_1.jpeg" alt="pretzel1"/>  
-    </div>
-    <div class="gallery-item">
-  <img src="/assets/img/2025-05-05-project-pretzel/pretzel_2.jpeg" alt="pretzel2"/>
-    </div>
-    <div class="gallery-item">
-  <img src="/assets/img/2025-05-05-project-pretzel/pretzel_3.jpeg" alt="pretzel3"/>
-    </div>
-    <div class="gallery-item">
-  <img src="/assets/img/2025-05-05-project-pretzel/pretzel_4.jpeg" alt="pretzel4"/>
-    </div>
-    <div class="gallery-item">
-  <img src="/assets/img/2025-05-05-project-pretzel/pretzel_5.jpeg" alt="pretzel5"/>
-    </div>
-  </div>
-</div>
+  {% include carousel.html height="50" unit="%" duration="7" number="1" %}
+
+  {% include carousel.html height="50" unit="%" duration="7" number="2" %}
+  
 
 ## 아키텍처 도식화
 ![Architecture Diagram](/assets/img/2025-05-05-project-pretzel/architecture-diagram.png)
