@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "프레젤(Pretzel) 서비스"
 description: 북미 해외 교환/유학생 커뮤니티 서비스
 date: 2025-05-05 17:01:28 -0400
