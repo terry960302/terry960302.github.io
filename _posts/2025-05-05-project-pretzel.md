@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "프레젤(Pretzel) 서비스"
+title: "[포트폴리오] 프레젤(Pretzel) 서비스"
 description: 북미 해외 교환/유학생 커뮤니티 서비스
-date: 2025-05-04 17:01:28 -0400
+date: 2020-04-03 17:01:28 -0400
 tags: [flutter, typescript, node.js, mysql, firebase, azure, redis]
-categories: []
+categories: [포트폴리오, (주)프레젤글로벌커넥션그룹]
 ---
 
 
@@ -18,25 +18,20 @@ categories: []
 ## 기간
  2020.04 ~ 2020.11
 
-## 👤 개발자
 
-| 이름 | 역할 |
-|------|------|
-| 김태완 | 시스템 설계, 전체 백엔드 구현, 채팅 서버 구축 및 운영, 데이터 마이그레이션, 배포 자동화, 크롤러 개발 |
-
-## 👤 팀구성
- 총 4인(기획자, 디자이너, 개발2) 
-
+## 기여도
+- 팀구성 : 총 4인(기획자, 디자이너, 개발2) 
+- 전체 프로젝트 기여도: **약 85% 이상**(데이터 크롤링 제외한 모든 개발작업 담당)
 ---
 
 ## 시연 이미지
-<p align="center">
+<div style="display: flex; justify-content: center; gap: 10px;">
   <img src="/assets/img/2025-05-05-project-pretzel/pretzel_1.jpeg" width="30%" alt="pretzel1"/>  
   <img src="/assets/img/2025-05-05-project-pretzel/pretzel_2.jpeg" width="30%" alt="pretzel2"/>
   <img src="/assets/img/2025-05-05-project-pretzel/pretzel_3.jpeg" width="30%" alt="pretzel3"/>
   <img src="/assets/img/2025-05-05-project-pretzel/pretzel_4.jpeg" width="30%" alt="pretzel4"/>
   <img src="/assets/img/2025-05-05-project-pretzel/pretzel_5.jpeg" width="30%" alt="pretzel5"/>
-</p>
+</div>
 
 
 ## 아키텍처 도식화
@@ -44,7 +39,7 @@ categories: []
 
 ## 프로젝트 개요
 
-Frezel 커뮤니티 앱은 **해외 유학생과 교환학생들이 시간표를 기반으로 자연스럽게 커뮤니티를 형성하고 소통할 수 있도록 설계된 모바일 전용 플랫폼**입니다.  
+Pretzel 커뮤니티 앱은 **해외 유학생과 교환학생들이 시간표를 기반으로 자연스럽게 커뮤니티를 형성하고 소통할 수 있도록 설계된 모바일 전용 플랫폼**입니다.  
 기본적으로 Firebase 기반의 **서버리스 인프라** 위에서 설계되었으며, 실시간 채팅, 사용자 반응형 알림, 자동화된 수업정보 수집 기능 등을 포함해 **1000명 이상의 사용자**가 실제로 사용한 검증된 MVP입니다.
 
 -  **국내 10개 대학교에서 테스트베드 운영**
