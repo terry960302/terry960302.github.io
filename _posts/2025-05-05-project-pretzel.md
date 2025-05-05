@@ -28,11 +28,11 @@ categories: 2020
 ## 시연 이미지
 <p align="center">
 
-  <img src="../assets/img/2025-05-05_project-pretzel/pretzel_1.jpeg" width="18%"/>  
-  <img src="../assets/img/2025-05-05_project-pretzel/pretzel_2.jpeg" width="18%"/>
-  <img src="../assets/img/2025-05-05_project-pretzel/pretzel_3.jpeg" width="18%"/>
-  <img src="../assets/img/2025-05-05_project-pretzel/pretzel_4.jpeg" width="18%"/>
-  <img src="../assets/img/2025-05-05_project-pretzel/pretzel_5.jpeg" width="18%"/>
+  <img src="../assets/img/2025-05-05_project-pretzel/pretzel_1.jpeg" width="18%" alt="pretzel1"/>  
+  <img src="../assets/img/2025-05-05_project-pretzel/pretzel_2.jpeg" width="18%" alt="pretzel2"/>
+  <img src="../assets/img/2025-05-05_project-pretzel/pretzel_3.jpeg" width="18%" alt="pretzel3"/>
+  <img src="../assets/img/2025-05-05_project-pretzel/pretzel_4.jpeg" width="18%" alt="pretzel4"/>
+  <img src="../assets/img/2025-05-05_project-pretzel/pretzel_5.jpeg" width="18%" alt="pretzel5"/>
   
   
   
