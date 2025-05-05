@@ -1,18 +1,18 @@
 ---
-layout: post
 title: "프레젤(Pretzel) - 북미 해외 교환/유학생 커뮤니티 서비스"
-subtitle: (주)프레젤글로벌커넥션그룹, 2020.04-2020.11
 date: 2025-05-05 17:01:28 -0400
-cover-img: /assets/img/2025-05-05_project-pretzel/pretzel_banner.png
+thumbnail: /assets/img/2025-05-05_project-pretzel/pretzel_banner.png
 tags: [Flutter, Typescript, Node.js, MySQL, Firebase, Azure, Redis]
-use_math: true
-categories: 2020
+categories: ["(주)프레젤글로벌커넥션그룹", "2020"]
 ---
 
 
 # 프레젤(Pretzel) - 북미 해외 교환/유학생 커뮤니티 서비스
 
 > **시간표 기반 실시간 채팅**을 중심으로 한, 해외 유학생과 교환학생을 위한 커뮤니티 앱
+
+## 기간
+ 2020.04 ~ 2020.11
 
 ## 👤 개발자
 
