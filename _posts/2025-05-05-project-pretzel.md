@@ -35,7 +35,7 @@ carousels:
 
 ## 시연 이미지
 
-  {% include carousel.html height="200" unit="%" duration="10" number="1" %}
+  {% include carousel.html number="1" height="600" unit="px" max_width="350px" img_fit="contain" %}
 
 ## 아키텍처 도식화
 ![Architecture Diagram](/assets/img/2025-05-05-project-pretzel/architecture-diagram.png)
