@@ -8,21 +8,36 @@ categories: [포트폴리오, (주)프레젤글로벌커넥션그룹]
 carousels:
   - images: 
     - image: /assets/img/2025-05-06-project-monegi/appstore-1.png
+      alt: 앱스토어1
     - image: /assets/img/2025-05-06-project-monegi/appstore-2.png
+      alt: 앱스토어2
     - image: /assets/img/2025-05-06-project-monegi/appstore-3.png
+      alt: 앱스토어3
     - image: /assets/img/2025-05-06-project-monegi/appstore-4.png
+      alt: 앱스토어4
     - image: /assets/img/2025-05-06-project-monegi/appstore-5.png
+      alt: 앱스토어5
   - images: 
     - image: /assets/img/2025-05-06-project-monegi/home1.jpeg
+      alt: 홈화면1
     - image: /assets/img/2025-05-06-project-monegi/home2.jpeg
+      alt: 홈화면2
     - image: /assets/img/2025-05-06-project-monegi/post.jpeg
+      alt: 게시글화면
     - image: /assets/img/2025-05-06-project-monegi/post_comment.jpeg
+      alt: 댓글화면
     - image: /assets/img/2025-05-06-project-monegi/write-post.jpeg
+      alt: 다다로그 작성
     - image: /assets/img/2025-05-06-project-monegi/soso-log.jpeg
+      alt: 소소로그 작성
     - image: /assets/img/2025-05-06-project-monegi/search.jpeg
+      alt: 검색화면
     - image: /assets/img/2025-05-06-project-monegi/scrap.jpeg
+      alt: 스크랩화면
     - image: /assets/img/2025-05-06-project-monegi/mypage.jpeg
+      alt: 마이페이지 화면
     - image: /assets/img/2025-05-06-project-monegi/notification.jpeg
+      alt: 알림화면
 
 ---
 
@@ -43,9 +58,9 @@ carousels:
 
 ## 시연이미지(스토어)
 
-  {% include carousel.html height="250" unit="%" duration="10" number="1" %}
+{% include carousel.html number="2" height="177.78" unit="%" max_width="350px" img_fit="contain" %}
 
 
 ## 시연이미지(작동)
 
-  {% include carousel.html height="250" unit="%" duration="10" number="2" %}
+{% include carousel.html number="2" height="177.78" unit="%" max_width="350px" img_fit="contain" %}
