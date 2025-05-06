@@ -26,9 +26,9 @@ categories: [포트폴리오, (주)프레젤글로벌커넥션그룹]
 
 
 ## 문제해결과정
-> [🔗 커머스 재고 동시성 문제를 해결하며...](./2025-05-06-problem-solving-mngshop.md)
+> [🔗 커머스 재고 동시성 문제를 해결하며...](/_posts/2025-05-06-problem-solving-mngshop.md)
 
-> [🔗 백오피스로 커머스 업무 자동화하기](./2025-05-07-problem-solving-mngshop.md)
+> [🔗 백오피스로 커머스 업무 자동화하기](/_posts/2025-05-07-problem-solving-mngshop.md)
 
 ## 시연 이미지
 > 실제 진행했던 학교별 프로모션 예시 이미지입니다.
