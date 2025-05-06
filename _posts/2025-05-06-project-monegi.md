@@ -61,7 +61,7 @@ carousels:
 {% include carousel.html number="1" height="600" unit="px" max_width="350px" img_fit="contain" %}
 
 ## 시연영상
-<iframe width="350px" height="600px" src="https://youtube.com/shorts/puZ1_88EqPo?feature=share" title="모내기 앱 시연영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="350px" height="600px" src="https://youtube.com/embed/puZ1_88EqPo?feature=share" title="모내기 앱 시연영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## 시연이미지(작동)
 
