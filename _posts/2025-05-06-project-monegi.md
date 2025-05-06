@@ -58,9 +58,9 @@ carousels:
 
 ## 시연이미지(스토어)
 
-{% include carousel.html number="2" height="177.78" unit="%" max_width="350px" img_fit="contain" %}
+{% include carousel.html number="2" height="120" unit="%" max_width="350px" img_fit="contain" %}
 
 
 ## 시연이미지(작동)
 
-{% include carousel.html number="2" height="177.78" unit="%" max_width="350px" img_fit="contain" %}
+{% include carousel.html number="2" height="120" unit="%" max_width="350px" img_fit="contain" %}
