@@ -70,3 +70,9 @@ carousels:
 ## 시연이미지(작동)
 
 {% include carousel.html number="2" height="600" unit="px" max_width="350px" img_fit="contain" %}
+
+
+## 아키텍처 도식화
+> Blue-green 자동 배포 파이프라인 구축으로 revision 버전에 따른 빠른 롤백이 가능한 구조.
+
+![Architecture Diagram](/assets/img/2025-05-06-project-monegi/monegi-cloud-architecture.png)
