@@ -1,166 +1,188 @@
 ---
 layout: post
 title: "[포트폴리오] 마켓빌(MarketBill) 서비스"
-description: 화훼 도소매상 거래 플랫폼
+description: 화훼시장 도소매상 거래 플랫폼
 date: 2022-07-01 17:01:28 -0400
 tags: [spring-boot, java, graphql, dgs-graphql, python, golang, aws]
 categories: [포트폴리오, 사이드프로젝트]
-carousels:
-  - images: 
-    - image: /assets/img/2025-05-06-project-monegi/appstore-1.png
-      alt: 앱스토어1
-    - image: /assets/img/2025-05-06-project-monegi/appstore-2.png
-      alt: 앱스토어2
-    - image: /assets/img/2025-05-06-project-monegi/appstore-3.png
-      alt: 앱스토어3
-    - image: /assets/img/2025-05-06-project-monegi/appstore-4.png
-      alt: 앱스토어4
-    - image: /assets/img/2025-05-06-project-monegi/appstore-5.png
-      alt: 앱스토어5
-  - images: 
-    - image: /assets/img/2025-05-06-project-monegi/home1.jpeg
-      alt: 홈화면1
-    - image: /assets/img/2025-05-06-project-monegi/home2.jpeg
-      alt: 홈화면2
-    - image: /assets/img/2025-05-06-project-monegi/post.jpeg
-      alt: 게시글화면
-    - image: /assets/img/2025-05-06-project-monegi/post_comment.jpeg
-      alt: 댓글화면
-    - image: /assets/img/2025-05-06-project-monegi/write-post.jpeg
-      alt: 다다로그 작성
-    - image: /assets/img/2025-05-06-project-monegi/soso-log.jpeg
-      alt: 소소로그 작성
-    - image: /assets/img/2025-05-06-project-monegi/search.jpeg
-      alt: 검색화면
-    - image: /assets/img/2025-05-06-project-monegi/scrap.jpeg
-      alt: 스크랩화면
-    - image: /assets/img/2025-05-06-project-monegi/mypage.jpeg
-      alt: 마이페이지 화면
-    - image: /assets/img/2025-05-06-project-monegi/notification.jpeg
-      alt: 알림화면
-
 ---
 
-# 모내기(Monegi) - 취향 기반 추천 커뮤니티
+# 마켓빌(MarketBill) - 화훼시장 도소매상 거래 플랫폼
 
-![Monegi Logo](/assets/img/2025-05-06-project-monegi/monegi-logo.png)
+![Monegi Logo](/assets/img/2025-05-08-project-marketbill/marketbill-banner.png)
 
-> **취향 기반 추천**을 중심으로 한, 공동구매 연결 커뮤니티 앱
+> 양재 꽃시장 회장님과의 대면 인터뷰를 통해 파악한 꽃집 사장님들의 일련의 거래 활동을 웹으로 옮겼습니다.
 
 
 ## 기간
-- `11개월` 2021.07 ~ 2022.05 
+- `7개월` 2022.10 ~ 2023.04 
 
 
 ## 기여도
-- 팀구성 : 총 8인(기획자1, 영업1, 마케터1, 디자이너1, 개발4) 
-- 전체 프로젝트 기여도: 약 `85%` (프론트엔드 50%, 백엔드 30%, 데브옵스 100%)
+- 팀구성 : 총 4인(기획자1, 디자이너1, 개발2) 
+- 개발 기여도: 약 `67%` (프론트엔드 0%, 백엔드 100%, 데브옵스 100%)
+
+## 운영이력
+- 실제 양재 꽃시장에서 회장님의 도움을 통해 테스트 베드를 진행했었습니다. 
 
 ## 문제해결과정
-> [🔗 SQL 튜닝으로 성능 400배 개선]({% post_url 2025-05-07-problem-solving-monegi %})
 
 
-## 시연이미지(스토어)
+
+## 시연이미지
 
 {% include carousel.html number="1" height="600" unit="px" max_width="350px" img_fit="contain" %}
 
-## 시연영상
-<div style="position: relative; display: flex; justify-content: center; align-items: center;">
-<iframe width="350px" height="600px" src="https://youtube.com/embed/puZ1_88EqPo?feature=share" title="모내기 앱 시연영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-
-## 시연이미지(작동)
-
-{% include carousel.html number="2" height="600" unit="px" max_width="350px" img_fit="contain" %}
-
 
 ## 아키텍처 도식화
-> Blue-green 자동 배포 파이프라인 구축으로 revision 버전에 따른 빠른 롤백이 가능한 구조.
 
-![Architecture Diagram](/assets/img/2025-05-06-project-monegi/monegi-cloud-architecture.png)
+![Architecture Diagram](/assets/img/2025-05-08-project-marketbill/marketbill-cloud-architecture.png)
+
+## 데이터베이스 ERD
+![ERD](/assets/img/2025-05-08-project-marketbill/marketbill-erd.png)
 
 ## 1. 프로젝트 개요
 
-> 장소 또는 제품을 주제로 한 후기 콘텐츠를 작성하고 공유할 수 있는 모바일 중심의 커뮤니티 플랫폼
+> MarketBill은 화훼 상점 간 도·소매 거래 구조를 디지털화한 서비스입니다.
+복잡한 종이 주문서와 구두 정산 과정을 전자화하여, 도매상-소매상 간의 주문, 정산, 영수증 발행, 알림 발송까지의 흐름을 하나의 플랫폼으로 통합했습니다.
 
-- 앱 기반 커뮤니티 (Flutter)
-- 다다로그/소소로그로 구분된 리뷰 유형
-- 사용자 피드백을 바탕으로 고도화된 검색, 알림, 스크랩 구조
-- 관리자용 React 어드민과 백엔드 통합 배포 구조 운영
+- 소매상/도매상은 화훼 경매 데이터를 연동하여 실제 화훼 시장에서 거래되는 꽃정보 확인이 가능합니다.
+- 소매상(플로리스트)는 도매상을 정하여 꽃에 대하여 '장바구니 > 주문'이 가능합니다.
+- 도매상은 그날 들어온 주문을 합산하여 거래 명세서를 발급할 수 있습니다.
+- 소매상은 도매상과 비즈니스 관계를 맺을 수 있습니다.
 
 ## 2. 주요 기능
 
-- JWT 기반 로그인/회원가입 (Naver Cloud SMS 인증 연동)
-- 제품/장소 후기 업로드 (텍스트 + 이미지)
-- 인기순(협업 필터링), 최신순, 팔로잉 탭 기반 홈 피드
-- 댓글, 좋아요, 스크랩, 딥링크 공유, 인앱 브라우저 연결
-- 사용자/리뷰/장소/제품 통합 검색 (Algolia)
-- 관리자 리뷰 생성/관리 기능 포함
-- 마이페이지: 작성 리뷰 및 스크랩 콘텐츠 정리
+### 주문 및 정산 기능
+- GraphQL 기반 API를 통해 소매상이 도매상에게 주문 요청
+- 품목, 수량, 등급 기반의 상세 주문 항목 작성 및 수정
+- 주문서 단위로 도매상이 가격 입력 및 정산 진행
+
+###  영수증 PDF 자동 생성
+- 주문 완료 시 Lambda에서 PDF 영수증 자동 생성
+- PDF는 S3에 업로드되어 클라이언트에서 다운로드 가능
+
+###  경매 데이터 연동
+- 공공 화훼 경매 API로부터 매일 실시간 데이터 수집
+- 품목·품종·등급별로 정제된 데이터 기반으로 주문 가능
+
+###  사용자 권한 관리
+- 도매상(사장/직원), 소매상 구분
+- 도매상만 가격 입력 및 영수증 발행 권한 부여
+- 직원 계정은 사장 계정에 종속되어 기능 일부 제한
 
 ## 3. 데이터 흐름 아키텍처
 
-> 사용자가 작성한 리뷰가 서버로 전달되어 이미지 처리 및 검색 인덱싱까지 완료되는 전체 흐름
+###  1) 주문 생성 플로우
+1. 클라이언트(React SPA)는 CloudFront를 통해 로드됨
+2. 사용자는 ALB를 통해 연결된 GraphQL API(ECS 상 Spring Boot)에 요청
+3. 주문 요청은 shopping_sessions, cart_items, order_sheets, order_items 등에 저장됨
 
-- Flutter 앱에서 이미지 포함 리뷰 작성
-- 이미지 → Cloud Run(media-file-process) 서버 → Cloud Storage 저장
-- 게시물 본문 및 메타 → Cloud SQL 저장
-- 동시에 Algolia에 인덱싱되어 검색 가능 상태로 전환
-- 좋아요/댓글 발생 시 → FCM 푸시 알림
-- 인앱 딥링크 공유, 장소/제품 외부 링크 이동 포함
+###  2) 영수증(PDF) 생성 및 저장
+1. 주문 완료 후 클라이언트에서 API Gateway로 Lambda(file-process-service) 직접 호출
+2. Lambda가 PDF 영수증을 생성 후 S3에 저장
+3. 생성된 영수증의 메타정보는 RDS(order_sheet_receipts)에 저장됨
+4. 클라이언트는 GraphQL 응답 또는 S3 경로를 통해 PDF에 접근
 
-## 4. 클라우드 인프라 아키텍처 (GCP 기반)
-```
-[Flutter Mobile App] + [React Admin Dashboard]
-→ GCP 기반
+###  3) 주문 알림 전송
+1. 주문 완료 후 클라이언트에서 API Gateway를 통해 Lambda(messaging-service) 호출
+2. Lambda가 SMS API를 통해 알림을 전송
+3. 전송 결과는 RDS(send_sms_logs)에 기록됨
 
-[NestJS API Server]
-→ Cloud Run (dev/prod 분리)
-→ Prisma 기반 도메인 설계
+###  4) 경매 데이터 수집 및 매핑
+1. EventBridge (cron 기반) → Lambda(scheduler-service) 실행
+2. 외부 화훼 경매 API로부터 데이터를 수집
+3. 수집된 원시 데이터는 public_biding_flowers 테이블에 저장
+4. 이후 flower_types, flowers, bidding_flowers 테이블로 가공/매핑 처리
 
-[Media Processor]
-→ Cloud Run 서비스 (해상도별 리사이징)
-→ GCS 저장
+>  Lambda 호출은 모두 API Gateway를 통해 수행되며, 이벤트 기반 트리거는 경매 데이터 수집용 스케줄링에만 사용됩니다.
 
-[Database]
-→ Cloud SQL for MySQL (운영/개발 분리)
 
-[Storage & CDN]
-→ Cloud Storage + Cloud CDN
+## 4. 클라우드 인프라 아키텍처 (AWS 기반)
 
-[Notification]
-→ Firebase Cloud Messaging (FCM)
+### 클라이언트
+- Frontend: React 기반 SPA
+- 호스팅 방식: S3 Static Website Hosting
+- 전송 경로: CloudFront를 통해 글로벌 CDN 배포
 
-[Search]
-→ Algolia 인덱싱 + 키워드 정제
+### 백엔드 (Core GraphQL API)
+- 실행 환경: AWS ECS (Fargate)
+- 서비스 구조: Java + Spring Boot + Netflix DGS (GraphQL)
+- 트래픽 라우팅: ALB (Application Load Balancer)를 통해 ECS로 전달
+- 보안 설정: ALB Security Group으로 인바운드 제어
 
-[CI/CD]
-→ Cloud Build + Artifact Registry + Cloud Run
+### PDF 처리 (영수증 생성)
+- 구성: Python + FastAPI (file-process-service)
+- 호출 경로: API Gateway → Lambda → PDF 생성
+- 출력 결과: S3에 저장, 메타데이터는 RDS에 기록
 
-[External API]
-→ Naver Cloud SMS 인증
-```
+### 메시징 (SMS 알림)
+- 구성: Golang + Echo (messaging-service)
+- 호출 경로: API Gateway → Lambda → 외부 SMS API 호출
+- 결과 기록: send_sms_logs 테이블에 저장
+
+### 스케줄러 (경매 데이터 수집)
+- 구성: Golang 기반 Lambda (scheduler-service)
+- 트리거: AWS EventBridge (cron 스케줄링)
+- 동작: 외부 공공 API에서 경매 데이터 수집 후 가공 및 저장
+
+### 데이터베이스
+- RDS (PostgreSQL): 전체 도메인 데이터 저장
+  - users, orders, flowers, receipts, logs 등 관리
+
+### CI/CD
+- CodeBuild + CodePipeline + ECR
+  - ECS 및 Lambda의 컨테이너 빌드 및 배포 자동화
+
+### 정적 파일 및 CDN
+- S3: 정적 자산 및 PDF 저장
+- CloudFront: SPA 및 영수증 다운로드용 글로벌 캐싱
+
+※ 모든 Lambda 서비스는 API Gateway를 통해 클라이언트와 연결되며, EventBridge는 스케줄링 용도로만 사용됩니다.
+
 
 
 ## 5. 기술스택
 
-- **Backend**: TypeScript, NestJS, Prisma, MySQL, Algolia SDK
-- **Infra**: GCP (Cloud Run, Cloud SQL, Cloud Storage, Cloud CDN, Cloud Build)
-- **Search**: Algolia
-- **Notification**: FCM
-- **Frontend**: Flutter (App), React.js (Admin)
-- **Etc**: Deep Link, Naver Cloud API
+### Framework / Library
+- Spring Boot 2.7.5
+- Netflix DGS (GraphQL)
+- FastAPI
+- Echo (Golang 경량 웹 프레임워크)
+
+### Database
+- PostgreSQL (RDS)
+
+### Infrastructure
+- AWS ECS (Fargate)
+- AWS Lambda
+- API Gateway
+- ALB (Application Load Balancer)
+- S3 + CloudFront (정적 파일 및 CDN)
+- RDS (PostgreSQL)
+- EventBridge (스케줄링)
+- CodeBuild + CodePipeline + ECR (CI/CD 파이프라인)
+
+### 기타
+- REST + GraphQL 혼합 구조
+- PDFKit, ReportLab 등 PDF 처리 라이브러리 (Python 내 사용 가능성 있음)
 
 ## 6. 설계 철학
 
-- **모놀리식 + 도메인 중심 설계**: Admin/유저 기능을 NestJS 모듈화로 분리
-- **검색 최적화 분리**: RDB는 정형데이터, Algolia는 비정형 검색 용도로 활용
-- **DevOps 자동화**: Cloud Run 리비전 기반 Blue-Green 배포
-- **운영 복잡도 최소화**: 관리자와 유저 API 서버 통합 운영
-- **실제 사용자 피드백 기반 UI/UX 및 기능 고도화**
+### 1. 도메인 분리를 통한 구조적 명확성
+- 영수증 처리, 메시지 발송, 경매 데이터 수집을 각각 독립된 서비스로 분리하여, 핵심 API 서버(Core Server)는 오직 GraphQL 기반 요청 처리에 집중할 수 있도록 설계했습니다.
 
-## 7. 운영 이력
+### 2. 비동기 이벤트보다 명시적 API 호출 지향
+- 호출 흐름의 명확성과 운영 디버깅 편의성을 위해 Lambda 서비스들은 EventBridge가 아닌 **API Gateway를 통해 직접 호출**되도록 구성했습니다.
 
-- 앱스토어 및 플레이스토어에 실제 배포 및 운영
-- 약 `1,000명 규모`의 실제 사용자 대상 사용성 테스트 완료
-- 사용자 리뷰/알림/검색 관련 피드백을 통해 기능 개선 및 장애 대응 경험 보유
+### 3. 운영 효율과 비용 절감을 고려한 인프라 선택
+- Lambda를 영수증 처리 및 메시징에 활용하여 **사용량 기반 과금**, **무상 구간 활용** 등 초기 비용 부담을 최소화했습니다.
+- ECS + ALB를 활용한 Core 서버 구성은 배포 유연성과 확장성 확보에 기여했습니다.
+
+### 4. 실사용자 환경을 고려한 간결한 기능 구조
+- 실제 꽃시장 상인을 위한 서비스라는 특성상, 복잡한 UI 없이 최소한의 요청 → 주문 → 영수증 → 알림 흐름만으로 구성
+- SMS, PDF, 경매 데이터 외 불필요한 기능은 철저히 배제
+
+### 5. 배포/확장 중심의 CI/CD 기반 운영
+- 모든 컴포넌트는 **CodePipeline + CodeBuild 기반 자동화된 빌드·배포**로 관리
+- Lambda 및 ECS 서비스 모두 ECR 기반 이미지 배포 구조 채택

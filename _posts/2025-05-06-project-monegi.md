@@ -56,6 +56,13 @@ carousels:
 - 팀구성 : 총 8인(기획자1, 영업1, 마케터1, 디자이너1, 개발4) 
 - 전체 프로젝트 기여도: 약 `85%` (프론트엔드 50%, 백엔드 30%, 데브옵스 100%)
 
+## 운영 이력
+
+- 앱스토어 및 플레이스토어 배포 및 운영
+- 약 `1,000명 규모`의 실제 사용자 대상 사용성 테스트 완료
+- 사용자 리뷰/알림/검색 관련 피드백을 통해 기능 개선 및 장애 대응 경험 보유
+
+
 ## 문제해결과정
 > [🔗 SQL 튜닝으로 성능 400배 개선]({% post_url 2025-05-07-problem-solving-monegi %})
 
@@ -68,6 +75,7 @@ carousels:
 <div style="position: relative; display: flex; justify-content: center; align-items: center;">
 <iframe width="350px" height="600px" src="https://youtube.com/embed/puZ1_88EqPo?feature=share" title="모내기 앱 시연영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
+
 ## 시연이미지(작동)
 
 {% include carousel.html number="2" height="600" unit="px" max_width="350px" img_fit="contain" %}
@@ -158,8 +166,3 @@ carousels:
 - **운영 복잡도 최소화**: 관리자와 유저 API 서버 통합 운영
 - **실제 사용자 피드백 기반 UI/UX 및 기능 고도화**
 
-## 7. 운영 이력
-
-- 앱스토어 및 플레이스토어에 실제 배포 및 운영
-- 약 `1,000명 규모`의 실제 사용자 대상 사용성 테스트 완료
-- 사용자 리뷰/알림/검색 관련 피드백을 통해 기능 개선 및 장애 대응 경험 보유
