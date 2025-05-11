@@ -4,7 +4,7 @@ title: "[문제해결] PDF 파일처리 성능 개선기"
 description: 마켓빌 프로젝트에서
 date: 2022-07-01 17:01:28 -0400
 tags: []
-categories: [포트폴리오, 문제해결과정]
+categories: [문제해결과정]
 ---
 
 # 영수증 PDF 대량 파일 처리 성능 개선기

@@ -3,7 +3,7 @@ layout: post
 title: "[포트폴리오] 프레젤(Pretzel) 서비스"
 description: 북미 해외 교환/유학생 커뮤니티 서비스
 date: 2020-04-03 17:01:28 -0400
-tags: [flutter, typescript, node.js, mysql, firebase, azure, redis]
+tags: [flutter, typescript, node.js, mysql, firebase, azure, redis, public-cloud]
 categories: [포트폴리오, (주)프레젤글로벌커넥션그룹]
 carousels:
   - images: 

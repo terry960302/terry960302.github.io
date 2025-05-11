@@ -3,7 +3,7 @@ layout: post
 title: "[포트폴리오] 모내기(monegi) 서비스"
 description: 취향기반 추천 공동구매 연결 커뮤니티
 date: 2021-07-01 17:01:28 -0400
-tags: [flutter, typescript, nest.js, gcp, mysql, graphql, fauna-db, sentry, amplitude, google-analytics]
+tags: [flutter, typescript, nest.js, gcp, mysql, graphql, fauna-db, sentry, amplitude, google-analytics, public-cloud]
 categories: [포트폴리오, (주)프레젤글로벌커넥션그룹]
 carousels:
   - images: 

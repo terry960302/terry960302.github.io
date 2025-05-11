@@ -4,7 +4,7 @@ title: "[문제해결] EXPLAIN ANALYZE로 SQL 튜닝으로 400배 개선"
 description: 취향기반 추천알고리즘을 만들며
 date: 2021-07-01 17:01:28 -0400
 tags: []
-categories: [포트폴리오, 문제해결과정]
+categories: [문제해결과정]
 ---
 
 # 추천알고리즘 SQL 튜닝
