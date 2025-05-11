@@ -7,13 +7,13 @@ tags: [aws, public-cloud]
 categories: [자격증, 퍼블릭클라우드]
 ---
 
-# [자격증] AWS Cerifited Solution Architect Professional 자격증 합격 후기 
+# [자격증] AWS Certified Solution Architect Professional 자격증 합격 후기 
 
 
 {% include image_banner.html
    src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fcky5HU%2FbtsMsVrBz7f%2Fmuc5Ccx07UFbp6mankQT31%2Fimg.png"
    alt="AWS SAP-02 합격 후기"
-   caption="출처 : Credely.com"
+   caption="Credly.com"
    caption_url="https://www.credly.com/badges/34cff64f-b6ac-41b7-8234-375df34bb8a7/linked_in_profile"
 %}
 
