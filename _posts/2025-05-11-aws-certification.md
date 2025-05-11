@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[자격증] AWS Cerifited Solution Architect Professional 자격증 합격 후기"
+title: "[자격증] AWS Certified Solution Architect Professional 자격증 합격 후기"
 description: 군복무 중에 클라우드 자격증 딴 후기
 date: 2024-08-12 17:01:28 -0400
 tags: [aws, public-cloud]
