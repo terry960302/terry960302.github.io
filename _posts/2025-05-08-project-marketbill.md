@@ -4,7 +4,7 @@ title: "[포트폴리오] 마켓빌(MarketBill) 서비스"
 description: 화훼시장 도소매상 거래 플랫폼
 date: 2022-07-01 17:01:28 -0400
 tags: [spring-boot, java, graphql, dgs-graphql, python, golang, aws, public-cloud]
-categories: [포트폴리오, 사이드프로젝트]
+categories: [프로젝트, 사이드프로젝트]
 ---
 
 # 마켓빌(MarketBill) - 화훼시장 도소매상 거래 플랫폼

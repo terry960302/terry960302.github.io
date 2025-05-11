@@ -4,7 +4,7 @@ title: "[포트폴리오] 프레젤(Pretzel) 서비스"
 description: 북미 해외 교환/유학생 커뮤니티 서비스
 date: 2020-04-03 17:01:28 -0400
 tags: [flutter, typescript, node.js, mysql, firebase, azure, redis, public-cloud]
-categories: [포트폴리오, (주)프레젤글로벌커넥션그룹]
+categories: [프로젝트, (주)프레젤글로벌커넥션그룹]
 carousels:
   - images: 
     - image: /assets/img/2025-05-05-project-pretzel/pretzel_1.jpeg
@@ -41,7 +41,7 @@ carousels:
 ---
 
 ## 시연영상
-{% include youtube.html url="https://youtube.com/embed/j6aFFWQu17A?feature=share" title="모내기 앱 시연영상" %}
+{% include youtube.html id="j6aFFWQu17A" title="프레젤 앱 시연영상" %}
 
 
 ## 시연 이미지

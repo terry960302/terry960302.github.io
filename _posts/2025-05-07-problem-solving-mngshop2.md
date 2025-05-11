@@ -4,9 +4,9 @@ title: "[문제해결] 커머스 백오피스를 만들게 된 이유"
 description: 프로모션 세일 공동구매 커머스 플랫폼에서
 date: 2021-07-01 17:01:28 -0400
 tags: []
-categories: [문제해결과정]
+categories: [문제해결, 자동화]
 ---
-
+화
 # 커머스 백오피스 업무 자동화
 
 ![Banner](https://t4.ftcdn.net/jpg/01/91/91/57/360_F_191915740_dShLi9gi8iTrp6d5QPaxWH6Rtunn5ZpZ.jpg)
