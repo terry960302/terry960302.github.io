@@ -41,7 +41,7 @@ carousels:
 ---
 
 ## 시연영상
-<iframe width="350px" height="600px" src="https://youtube.com/embed/j6aFFWQu17A?feature=share" title="모내기 앱 시연영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube.html url="https://youtube.com/embed/j6aFFWQu17A?feature=share" title="모내기 앱 시연영상" %}
 
 
 ## 시연 이미지
