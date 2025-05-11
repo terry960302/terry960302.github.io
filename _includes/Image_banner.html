@@ -1,0 +1,10 @@
+<!-- _includes/image_banner.html -->
+<div style="margin: 2rem 0; text-align: center;">
+  <img src="{{ include.src }}" alt="{{ include.alt | default: 'Image' }}"
+       style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);" />
+  {% if include.caption %}
+    <p style="font-size: 0.85rem; color: #777; margin-top: 0.5rem;">
+      출처: <a href="{{ include.caption_url }}" target="_blank" rel="noopener noreferrer">{{ include.caption }}</a>
+    </p>
+  {% endif %}
+</div>
