@@ -25,10 +25,6 @@ categories: [프로젝트, 사이드프로젝트]
 ## 운영이력
 - 실제 양재 꽃시장에서 회장님의 도움을 통해 테스트 베드를 진행했었습니다. 
 
-<!-- ## 문제해결과정
-> [🔗 PDF 파일처리 성능 개선기]({% post_url 2025-05-08-problem-solving-marketbill %}) -->
-
-
 ## 시연이미지
 
 {% include carousel.html number="1" height="600" unit="px" max_width="350px" img_fit="contain" %}

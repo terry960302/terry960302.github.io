@@ -10,9 +10,8 @@ order: 4
 # CONTACT
 
 - 📧  Email: [terry960302@gmail.com](mailto:terry960302@gmail.com)
-- 🌐  Github: https://github.com/terry960302
-- 📝  Blog(Old): https://blog.naver.com/ljk041180 
-- 📝  Blog(New): https://pandaterry.tistory.com/
+- 🌐  Github: [terry960302](https://github.com/terry960302)
+- 📝  Blog(New): [티스토리](https://pandaterry.tistory.com/)
 
 <br/>
 
