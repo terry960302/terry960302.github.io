@@ -5,6 +5,7 @@ description: 프로모션 세일 공동구매 커머스 플랫폼에서
 date: 2021-07-01 17:01:28 -0400
 tags: []
 categories: [문제해결, 동시성 처리]
+published: false
 ---
 
 # 커머스 재고 트랜잭션 동시성 처리 
